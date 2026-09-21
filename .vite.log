@@ -1,0 +1,588 @@
+
+  VITE v6.4.3  ready in 1089 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://192.168.3.117:5174/
+11:15:11 AM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/editor/EditorSidebar.tsx, /src/components/editor/mobile/MobileBottomDock.tsx, /src/components/editor/mobile/MobileZoneBar.tsx, /src/components/editor/mobile/MobileBottomSheet.tsx, /src/components/export/ExportModal.tsx, /src/components/export/ProjectSaveModal.tsx, /src/components/common/Navbar.tsx, /src/components/legal/TermsPage.tsx, /src/components/changelog/ChangelogPage.tsx, /src/components/legal/PrivacyPolicyPage.tsx, /src/components/editor/Canvas2DStage.tsx, /src/components/feedback/FeedbackModal.tsx, /src/components/landing/LandingPage.tsx, /src/components/editor/ZoneSelector.tsx, /src/components/3d/ViewportOverlay.tsx, /src/components/3d/TShirtModel.tsx, /src/components/landing/HeroAnimatedShirt.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/LayersTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/editor/tabs/ImageUploadTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx
+11:15:11 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+11:15:11 AM [vite] (client) hmr update /src/components/common/Navbar.tsx, /src/index.css
+11:15:40 AM [vite] (client) hmr update /src/components/common/Navbar.tsx, /src/index.css
+11:15:40 AM [vite] (client) hmr update /src/components/editor/tabs/GarmentColorTab.tsx, /src/index.css
+11:15:40 AM [vite] (client) hmr update /src/components/editor/tabs/TextEditorTab.tsx, /src/index.css
+11:16:06 AM [vite] .env.local changed, restarting server...
+11:16:06 AM [vite] .env.local changed, restarting server...
+11:16:06 AM [vite] (client) hmr update /src/components/editor/tabs/TextEditorTab.tsx, /src/index.css
+11:16:06 AM [vite] (client) hmr update /src/components/editor/tabs/ClipartTab.tsx, /src/index.css
+11:16:06 AM [vite] (client) page reload src/types/editor.ts
+11:16:06 AM [vite] (client) page reload index.html
+11:16:06 AM [vite] server restarted.
+11:20:36 AM [vite] (client) hmr update /src/components/editor/tabs/TextEditorTab.tsx, /src/index.css
+11:20:36 AM [vite] (client) hmr update /src/components/editor/tabs/GarmentColorTab.tsx, /src/index.css
+11:20:36 AM [vite] Internal server error: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/components/editor/tabs/GarmentColorTab.tsx: Unterminated JSX contents. (145:10)
+
+  143 |           })}
+  144 |         </div>
+> 145 |     </div>
+      |           ^
+  146 |   );
+  147 | };
+  148 |
+  Plugin: vite:react-babel
+  File: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/components/editor/tabs/GarmentColorTab.tsx:145:10
+  143|            })}
+  144|          </div>
+  145|      </div>
+     |            ^
+  146|    );
+  147|  };
+      at constructor (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:369:19)
+      at TypeScriptParserMixin.raise (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6620:19)
+      at TypeScriptParserMixin.jsxReadToken (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4464:20)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4790:12)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10008:11)
+      at TypeScriptParserMixin.nextToken (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5803:10)
+      at TypeScriptParserMixin.next (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5713:10)
+      at TypeScriptParserMixin.eat (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5717:12)
+      at TypeScriptParserMixin.expect (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6919:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4696:10)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4711:37)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4714:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4765:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4775:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10852:21)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9796:39
+      at TypeScriptParserMixin.tryParse (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6928:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9796:18)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10821:39
+      at TypeScriptParserMixin.allowInAnd (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12455:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10821:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12522:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11701:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11357:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4780:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10852:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9807:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10805:23)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10801:39
+      at TypeScriptParserMixin.allowInAnd (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12450:16)
+      at TypeScriptParserMixin.parseExpression (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10801:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:13171:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12827:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9529:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12796:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12776:17)
+11:20:36 AM [vite] Internal server error: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/components/editor/tabs/GarmentColorTab.tsx: Unterminated JSX contents. (145:10)
+
+  143 |           })}
+  144 |         </div>
+> 145 |     </div>
+      |           ^
+  146 |   );
+  147 | };
+  148 |
+  Plugin: vite:react-babel
+  File: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/components/editor/tabs/GarmentColorTab.tsx:145:10
+  143|            })}
+  144|          </div>
+  145|      </div>
+     |            ^
+  146|    );
+  147|  };
+      at constructor (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:369:19)
+      at TypeScriptParserMixin.raise (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6620:19)
+      at TypeScriptParserMixin.jsxReadToken (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4464:20)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4790:12)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10008:11)
+      at TypeScriptParserMixin.nextToken (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5803:10)
+      at TypeScriptParserMixin.next (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5713:10)
+      at TypeScriptParserMixin.eat (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5717:12)
+      at TypeScriptParserMixin.expect (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6919:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4696:10)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4711:37)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4714:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4765:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4775:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10852:21)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9796:39
+      at TypeScriptParserMixin.tryParse (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6928:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9796:18)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10821:39
+      at TypeScriptParserMixin.allowInAnd (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12455:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10821:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12522:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11701:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11357:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4780:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10852:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9807:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10805:23)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10801:39
+      at TypeScriptParserMixin.allowInAnd (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12450:16)
+      at TypeScriptParserMixin.parseExpression (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10801:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:13171:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12827:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9529:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12796:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12776:17)
+11:20:36 AM [vite] Internal server error: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/components/editor/tabs/GarmentColorTab.tsx: Unterminated JSX contents. (145:10)
+
+  143 |           })}
+  144 |         </div>
+> 145 |     </div>
+      |           ^
+  146 |   );
+  147 | };
+  148 |
+  Plugin: vite:react-babel
+  File: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/components/editor/tabs/GarmentColorTab.tsx:145:10
+  143|            })}
+  144|          </div>
+  145|      </div>
+     |            ^
+  146|    );
+  147|  };
+      at constructor (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:369:19)
+      at TypeScriptParserMixin.raise (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6620:19)
+      at TypeScriptParserMixin.jsxReadToken (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4464:20)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4790:12)
+      at TypeScriptParserMixin.getTokenFromCode (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10008:11)
+      at TypeScriptParserMixin.nextToken (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5803:10)
+      at TypeScriptParserMixin.next (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5713:10)
+      at TypeScriptParserMixin.eat (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:5717:12)
+      at TypeScriptParserMixin.expect (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6919:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4696:10)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4711:37)
+      at TypeScriptParserMixin.jsxParseElementAt (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4714:32)
+      at TypeScriptParserMixin.jsxParseElement (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4765:17)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4775:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10852:21)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9796:39
+      at TypeScriptParserMixin.tryParse (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:6928:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9796:18)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10821:39
+      at TypeScriptParserMixin.allowInAnd (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12455:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10821:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12522:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11701:28)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11357:23)
+      at TypeScriptParserMixin.parseExprAtom (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:4780:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10852:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9807:20)
+      at TypeScriptParserMixin.parseExpressionBase (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10805:23)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10801:39
+      at TypeScriptParserMixin.allowInAnd (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12450:16)
+      at TypeScriptParserMixin.parseExpression (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:10801:17)
+      at TypeScriptParserMixin.parseReturnStatement (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:13171:28)
+      at TypeScriptParserMixin.parseStatementContent (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12827:21)
+      at TypeScriptParserMixin.parseStatementContent (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:9529:18)
+      at TypeScriptParserMixin.parseStatementLike (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12796:17)
+      at TypeScriptParserMixin.parseStatementListItem (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/@babel/parser/lib/index.js:12776:17)
+11:20:45 AM [vite] (client) hmr update /src/components/editor/tabs/GarmentColorTab.tsx, /src/index.css
+11:21:06 AM [vite] (client) hmr update /src/components/editor/tabs/ClipartTab.tsx, /src/index.css
+11:28:28 AM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+11:28:28 AM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx
+11:32:34 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+11:44:44 AM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+11:44:44 AM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx
+12:11:53 PM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+12:13:45 PM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+12:15:57 PM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+12:15:59 PM [vite] (client) ✨ new dependencies optimized: three/examples/jsm/utils/BufferGeometryUtils.js
+12:15:59 PM [vite] (client) ✨ optimized dependencies changed. reloading
+12:25:09 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+12:25:09 PM [vite] (client) page reload src/main.tsx
+12:25:09 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx
+12:25:12 PM [vite] (client) ✨ new dependencies optimized: react-router-dom
+12:25:12 PM [vite] (client) ✨ optimized dependencies changed. reloading
+12:25:28 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+12:43:34 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx
+12:43:34 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+12:43:34 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+12:43:34 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+12:43:34 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+12:43:34 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:43:34 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+12:44:33 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+12:47:28 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+12:47:28 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+12:47:28 PM [vite] (client) hmr update /src/components/export/ExportModal.tsx, /src/index.css
+12:53:21 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+12:53:21 PM [vite] (client) page reload index.html
+12:53:21 PM [vite] (client) hmr update /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx
+12:55:35 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx
+12:55:35 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/components/common/Navbar.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/shop/pages/ProductPage.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/shop/pages/OrdersPage.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/shop/pages/OrderPage.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/shop/pages/ProfilePage.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr update /src/shop/pages/PaymentResultPage.tsx, /src/index.css
+12:55:35 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:55:35 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+1:00:50 PM [vite] (client) hmr update /src/components/common/Navbar.tsx, /src/index.css
+1:00:50 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+1:00:50 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+1:09:11 PM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+1:18:45 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+1:18:45 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+1:18:45 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx
+1:20:12 PM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+1:21:22 PM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+1:22:57 PM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+1:24:04 PM [vite] (client) hmr update /src/components/3d/TShirtModel.tsx, /src/index.css
+2:05:27 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:06:03 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx
+2:06:03 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+2:06:03 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+2:06:03 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+2:06:03 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx
+2:06:03 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+2:06:04 PM [vite] (client) Pre-transform error: Transform failed with 1 error:
+/Users/mehriddin_xalilov/Documents/textile/web-3d/src/shop/pages/HomePage.tsx:108:7: ERROR: The character "}" is not valid inside a JSX element
+  Plugin: vite:esbuild
+  File: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/shop/pages/HomePage.tsx:89:0
+  
+  The character "}" is not valid inside a JSX element
+  106|            </div>
+  107|          </section>
+  108|        )}
+     |         ^
+  109|  
+  110|        <section className="space-y-4">
+  
+2:06:04 PM [vite] Internal server error: Transform failed with 1 error:
+/Users/mehriddin_xalilov/Documents/textile/web-3d/src/shop/pages/HomePage.tsx:108:7: ERROR: The character "}" is not valid inside a JSX element
+  Plugin: vite:esbuild
+  File: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/shop/pages/HomePage.tsx:89:0
+  
+  The character "}" is not valid inside a JSX element
+  106|            </div>
+  107|          </section>
+  108|        )}
+     |         ^
+  109|  
+  110|        <section className="space-y-4">
+  
+      at failureErrorWithLog (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:1467:15)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:736:50
+      at responseCallbacks.<computed> (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:603:9)
+      at handleIncomingPacket (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:658:12)
+      at Socket.readFromStdout (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:581:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+2:06:04 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+2:06:04 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+2:06:04 PM [vite] Internal server error: Transform failed with 1 error:
+/Users/mehriddin_xalilov/Documents/textile/web-3d/src/shop/pages/HomePage.tsx:108:7: ERROR: The character "}" is not valid inside a JSX element
+  Plugin: vite:esbuild
+  File: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/shop/pages/HomePage.tsx:89:0
+  
+  The character "}" is not valid inside a JSX element
+  106|            </div>
+  107|          </section>
+  108|        )}
+     |         ^
+  109|  
+  110|        <section className="space-y-4">
+  
+      at failureErrorWithLog (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:1467:15)
+      at /Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:736:50
+      at responseCallbacks.<computed> (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:603:9)
+      at handleIncomingPacket (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:658:12)
+      at Socket.readFromStdout (/Users/mehriddin_xalilov/Documents/textile/web-3d/node_modules/esbuild/lib/main.js:581:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+2:06:18 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+2:11:18 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:11:18 PM [vite] (client) hmr update /src/shop/ReadyCard.tsx, /src/index.css
+2:11:18 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+2:11:18 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+2:11:18 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx
+2:16:04 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:20:15 PM [vite] (client) hmr update /src/components/3d/StudioScene.tsx, /src/index.css
+2:20:15 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:32:46 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:33:05 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:34:49 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:35:12 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:36:46 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+2:36:55 PM [vite] (client) hmr update /src/shop/ReadyCard.tsx, /src/index.css
+2:36:55 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+2:36:55 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx
+2:37:32 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+2:37:47 PM [vite] (client) hmr update /src/shop/pages/ReadyPage.tsx, /src/index.css
+2:37:47 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx
+2:37:47 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+2:37:47 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+2:40:02 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+2:40:09 PM [vite] (client) hmr update /src/shop/ReadyCard.tsx, /src/index.css
+2:40:09 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+2:40:09 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+2:40:09 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx
+2:40:50 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+2:40:50 PM [vite] (client) hmr update /src/shop/pages/OrderPage.tsx, /src/index.css
+2:40:50 PM [vite] (client) hmr update /src/shop/pages/OrdersPage.tsx, /src/index.css
+2:40:50 PM [vite] (client) hmr update /src/shop/pages/ProductPage.tsx, /src/index.css
+2:40:50 PM [vite] (client) hmr update /src/shop/pages/PaymentResultPage.tsx, /src/index.css
+2:40:50 PM [vite] (client) hmr update /src/shop/pages/ProfilePage.tsx, /src/index.css
+2:40:50 PM [vite] (client) hmr update /src/shop/pages/StaticPage.tsx, /src/index.css
+2:40:50 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+2:40:50 PM [vite] (client) hmr update /src/components/shop/AuthModal.tsx, /src/index.css
+2:40:54 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/shop/pages/OrderPage.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/shop/pages/OrdersPage.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/shop/pages/ProductPage.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/shop/pages/PaymentResultPage.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/shop/pages/ProfilePage.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/shop/pages/StaticPage.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+2:41:00 PM [vite] (client) hmr update /src/components/shop/AuthModal.tsx, /src/index.css
+2:41:07 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+2:41:51 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+2:42:19 PM [vite] (client) hmr update /src/components/3d/StudioScene.tsx, /src/index.css
+2:42:19 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+2:57:02 PM [vite] (client) hmr update /src/tools/ThumbsTool.tsx, /src/index.css
+3:02:38 PM [vite] (client) hmr update /src/shop/ReadyCard.tsx, /src/index.css
+3:02:38 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+3:02:38 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:02:38 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx
+3:04:37 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx
+3:04:37 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:04:37 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:05:07 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx
+3:05:07 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:05:07 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:05:27 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+3:05:27 PM [vite] (client) hmr update /src/shop/pages/ProductPage.tsx, /src/index.css
+3:05:52 PM [vite] (client) hmr update /src/shop/pages/ProductPage.tsx, /src/index.css
+3:06:01 PM [vite] (client) hmr update /src/shop/pages/ProductPage.tsx, /src/index.css
+3:06:01 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+3:06:02 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx
+3:06:02 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:06:02 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:13:07 PM [vite] (client) hmr update /src/components/3d/ViewportOverlay.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/landing/LandingPage.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/changelog/ChangelogPage.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/feedback/FeedbackModal.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/common/Navbar.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/legal/PrivacyPolicyPage.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/legal/TermsPage.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/export/ProjectSaveModal.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/tabs/ClipartTab.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/EditorSidebar.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/export/ExportModal.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/tabs/GarmentColorTab.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/tabs/ImageUploadTab.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/mobile/MobileBottomSheet.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/ZoneSelector.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/Canvas2DStage.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/tabs/LayersTab.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/tabs/TextEditorTab.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/mobile/MobileBottomDock.tsx, /src/index.css
+3:13:07 PM [vite] (client) hmr update /src/components/editor/mobile/MobileZoneBar.tsx, /src/index.css
+3:13:21 PM [vite] (client) hmr update /src/components/3d/ViewportOverlay.tsx, /src/index.css
+3:13:21 PM [vite] (client) hmr update /src/components/feedback/FeedbackModal.tsx, /src/index.css
+3:13:21 PM [vite] (client) hmr update /src/components/landing/LandingPage.tsx, /src/index.css
+3:13:21 PM [vite] (client) hmr update /src/components/legal/TermsPage.tsx, /src/index.css
+3:13:21 PM [vite] (client) hmr update /src/components/legal/PrivacyPolicyPage.tsx, /src/index.css
+3:13:21 PM [vite] (client) hmr update /src/components/changelog/ChangelogPage.tsx, /src/index.css
+3:13:27 PM [vite] (client) hmr update /src/components/export/ExportModal.tsx, /src/index.css
+3:13:27 PM [vite] (client) hmr update /src/components/editor/ZoneSelector.tsx, /src/index.css
+3:13:27 PM [vite] (client) hmr update /src/components/editor/Canvas2DStage.tsx, /src/index.css
+3:13:27 PM [vite] (client) hmr update /src/components/editor/tabs/TextEditorTab.tsx, /src/index.css
+3:13:27 PM [vite] (client) hmr update /src/components/editor/tabs/ClipartTab.tsx, /src/index.css
+3:13:27 PM [vite] (client) hmr update /src/components/editor/mobile/MobileZoneBar.tsx, /src/index.css
+3:13:27 PM [vite] (client) hmr update /src/components/editor/tabs/GarmentColorTab.tsx, /src/index.css
+3:13:27 PM [vite] (client) hmr update /src/components/editor/mobile/MobileBottomSheet.tsx, /src/index.css
+3:13:31 PM [vite] (client) hmr update /src/components/editor/tabs/GarmentColorTab.tsx, /src/index.css
+3:13:38 PM [vite] (client) hmr update /src/components/common/Navbar.tsx, /src/index.css
+3:13:38 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+3:13:38 PM [vite] (client) hmr update /src/components/editor/tabs/GarmentColorTab.tsx, /src/index.css
+3:13:38 PM [vite] (client) hmr update /src/components/editor/mobile/MobileBottomSheet.tsx, /src/index.css
+3:13:43 PM [vite] (client) hmr update /src/components/3d/StudioScene.tsx, /src/index.css
+3:13:55 PM [vite] (client) hmr update /src/components/3d/StudioScene.tsx, /src/index.css
+3:14:19 PM [vite] (client) hmr update /src/components/3d/StudioScene.tsx, /src/index.css
+3:14:40 PM [vite] (client) hmr update /src/components/3d/StudioScene.tsx, /src/index.css
+3:22:03 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+3:22:54 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+3:23:08 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+3:23:43 PM [vite] (client) hmr update /src/shop/Reviews.tsx, /src/index.css
+3:23:43 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx
+3:23:43 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:23:43 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:24:21 PM [vite] (client) hmr update /src/shop/QtyInput.tsx, /src/index.css
+3:24:21 PM [vite] (client) hmr update /src/shop/Reviews.tsx, /src/index.css
+3:24:46 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+3:31:05 PM [vite] (client) hmr update /src/shop/PayPicker.tsx, /src/index.css
+3:31:18 PM [vite] (client) hmr update /src/components/shop/OrderModal.tsx, /src/index.css
+3:31:18 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+3:35:55 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx
+3:35:55 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:35:55 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:36:13 PM [vite] (client) hmr update /src/shop/ReadyCard.tsx, /src/index.css
+3:36:13 PM [vite] (client) hmr update /src/shop/pages/ReadyPage.tsx, /src/index.css
+3:36:13 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh (export removed)
+3:36:13 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx
+3:37:45 PM [vite] (client) hmr update /src/shop/Reviews.tsx, /src/index.css
+3:37:45 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/pages/DesignPage.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx
+3:37:45 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+3:37:45 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+3:37:45 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:37:45 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:38:01 PM [vite] (client) hmr update /src/shop/pages/DesignPage.tsx, /src/index.css
+3:45:42 PM [vite] (client) hmr update /src/components/editor/ZoneSelector.tsx, /src/index.css
+3:46:35 PM [vite] (client) hmr update /src/components/3d/ViewportOverlay.tsx, /src/index.css
+3:47:10 PM [vite] (client) hmr update /src/shop/ReadyCard.tsx, /src/index.css
+3:47:12 PM [vite] (client) ✨ new dependencies optimized: zustand/middleware
+3:47:12 PM [vite] (client) ✨ optimized dependencies changed. reloading
+3:47:12 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:47:12 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ReadyProductPage.tsx
+3:47:57 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx
+3:47:57 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:47:57 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:48:18 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+3:48:18 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+3:48:39 PM [vite] (client) hmr update /src/shop/pages/ReadyProductPage.tsx, /src/index.css
+3:48:39 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+3:48:39 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:48:39 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:54:41 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+3:55:05 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+3:55:05 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+3:55:05 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:55:05 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+3:55:10 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+3:55:10 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+3:55:10 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:01:46 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+4:01:46 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+4:01:46 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:01:46 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:05:39 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+4:05:39 PM [vite] (client) hmr update /src/shop/pages/ReadyProductPage.tsx, /src/index.css
+4:05:39 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+4:05:39 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:05:39 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:06:41 PM [vite] (client) hmr update /src/shop/pages/CartPage.tsx, /src/index.css
+4:06:41 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+4:06:41 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:06:41 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:09:40 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx
+4:09:40 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+4:09:40 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:09:40 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:10:09 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+4:10:09 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+4:10:09 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+4:12:38 PM [vite] (client) hmr update /src/shop/pages/HomePage.tsx, /src/index.css
+4:17:03 PM [vite] (client) hmr update /src/shop/ReadyCard.tsx, /src/index.css
+4:17:03 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+4:17:03 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:17:03 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/FavoritesPage.tsx, /src/shop/pages/CartPage.tsx
+4:17:04 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:17:04 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:17:27 PM [vite] (client) hmr update /src/shop/pages/ReadyProductPage.tsx, /src/index.css
+4:17:27 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx, /src/shop/ReadyCard.tsx
+4:17:27 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:17:27 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:17:52 PM [vite] (client) hmr update /src/components/editor/tabs/GarmentColorTab.tsx, /src/index.css
+4:18:01 PM [vite] (client) hmr update /src/components/editor/tabs/ClipartTab.tsx, /src/index.css
+4:24:24 PM [vite] (client) hmr update /src/shop/ShopLayout.tsx, /src/index.css
+4:24:45 PM [vite] (client) hmr update /src/shop/pages/ReadyProductPage.tsx, /src/index.css
+4:24:45 PM [vite] (client) hmr update /src/shop/pages/ReadyPage.tsx, /src/index.css
+4:29:15 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+4:29:16 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:29:16 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:29:45 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx, /src/shop/ReadyCard.tsx
+4:29:45 PM [vite] (client) warning: Duplicate key "Saqlandi" in object literal
+37 |    'Manzillarim': ['Мои адреса', 'My addresses'], "Ma'lumotlarim": ['Мои данные', 'My details'], 'Shaxsiy kabinet uchun tizimga kiring': ['Войдите в личный кабинет', 'Sign in to your account'], 'Yangi manzil': ['Новый адрес', 'New address'], 'Manzil nomi (Uy, Ish)': ['Название (Дом, Работа)', 'Label (Home, Work)'], 'Qabul qiluvchi': ['Получатель', 'Recipient'], 'Viloyat': ['Область', 'Region'], 'Shahar / tuman': ['Город / район', 'City / district'], "Ko'cha, uy": ['Улица, дом', 'Street, house'], 'Kvartira': ['Квартира', 'Apartment'], "Mo'ljal": ['Ориентир', 'Landmark'], 'Asosiy manzil': ['Основной адрес', 'Default address'], 'Asosiy': ['Основной', 'Default'], 'Saqlash': ['Сохранить', 'Save'], 'Bekor qilish': ['Отмена', 'Cancel'], 'Tahrirlash': ['Изменить', 'Edit'], "Manzil yo'q": ['Адресов пока нет', 'No addresses yet'], 'Ism': ['Имя', 'First name'], 'Familiya': ['Фамилия', 'Last name'], 'Telefon': ['Телефон', 'Phone'], 'Saqlandi': ['Сохранено', 'Saved'], 'Manzilni tanlang': ['Выберите адрес', 'Choose an address'], 'Yangi manzil kiritish': ['Ввести новый адрес', 'Enter a new address'], 'Buyurtma tarkibi': ['Состав заказа', 'Order items'],
+38 |    'Sotib olish': ['Купить', 'Buy now'], 'Kirish va sotib olish': ['Войти и купить', 'Sign in & buy'], "O'zgartirish": ['Изменить', 'Customize'], 'Soni': ['Кол-во', 'Qty'], 'Jami': ['Итого', 'Total'], "To'lov": ['Оплата', 'Payment'], 'Ismingiz': ['Ваше имя', 'Your name'], 'Telefon (+998...)': ['Телефон (+998...)', 'Phone (+998...)'], 'Yetkazib berish manzili': ['Адрес доставки', 'Delivery address'], 'Razmer': ['Размер', 'Size'], 'Razmer tanlang': ['Выберите размер', 'Choose a size'], 'bosma bilan': ['с печатью', 'with print'], "3D ko'rinish": ['3D вид', '3D view'],
+39 |    'Saqlash (admin)': ['Сохранить (админ)', 'Save (admin)'], 'Saqlandi': ['Сохранено', 'Saved'],
+   |                                                                            ^
+40 |  };
+41 |  
+
+  Plugin: vite:esbuild
+  File: /Users/mehriddin_xalilov/Documents/textile/web-3d/src/i18n.ts
+4:29:45 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:29:45 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:29:45 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:29:45 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/FavoritesPage.tsx, /src/shop/pages/CartPage.tsx
+4:29:58 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx, /src/shop/ReadyCard.tsx
+4:29:58 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:29:58 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:29:58 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:29:58 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/FavoritesPage.tsx, /src/shop/pages/CartPage.tsx
+4:30:30 PM [vite] (client) hmr update /src/App.tsx, /src/index.css, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx, /src/shop/ReadyCard.tsx
+4:30:30 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:30:30 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:30:30 PM [vite] (client) hmr invalidate /src/shop/ReadyCard.tsx Could not Fast Refresh ("money" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:30:30 PM [vite] (client) hmr update /src/index.css, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/FavoritesPage.tsx, /src/shop/pages/CartPage.tsx
+4:30:47 PM [vite] (client) hmr update /src/shop/pages/ProfilePage.tsx, /src/index.css
+4:31:00 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/components/common/Navbar.tsx, /src/components/shop/AuthModal.tsx, /src/components/shop/OrderModal.tsx, /src/components/editor/tabs/GarmentColorTab.tsx, /src/components/editor/tabs/TextEditorTab.tsx, /src/components/editor/tabs/ClipartTab.tsx, /src/components/3d/TShirtModel.tsx, /src/shop/pages/OrdersPage.tsx, /src/shop/ShopLayout.tsx, /src/shop/pages/HomePage.tsx, /src/shop/pages/ProfilePage.tsx, /src/tools/ThumbsTool.tsx, /src/components/shop/AdminSaveButton.tsx, /src/shop/Reviews.tsx, /src/shop/pages/ReadyProductPage.tsx, /src/shop/pages/CartPage.tsx, /src/shop/LangSwitcher.tsx, /src/shop/AccountLayout.tsx, /src/shop/pages/ProductPage.tsx, /src/shop/pages/OrderPage.tsx, /src/shop/pages/PaymentResultPage.tsx, /src/shop/pages/StaticPage.tsx, /src/shop/pages/ReadyPage.tsx, /src/shop/pages/FavoritesPage.tsx
+4:31:00 PM [vite] (client) hmr update /src/shop/pages/ProfilePage.tsx, /src/index.css
+4:31:00 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:31:00 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:31:25 PM [vite] (client) hmr update /src/shop/pages/OrdersPage.tsx, /src/index.css
+4:31:25 PM [vite] (client) hmr update /src/shop/pages/FavoritesPage.tsx, /src/index.css
+4:31:25 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+4:31:25 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:31:25 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx
+4:31:50 PM [vite] (client) hmr update /src/shop/pages/CartPage.tsx, /src/index.css
+4:31:50 PM [vite] (client) hmr update /src/shop/pages/ReadyProductPage.tsx, /src/index.css
+4:33:23 PM [vite] (client) hmr update /src/shop/pages/OrdersPage.tsx, /src/index.css
+4:33:24 PM [vite] (client) hmr invalidate /src/shop/pages/OrdersPage.tsx Could not Fast Refresh ("STATUS" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:33:24 PM [vite] (client) hmr update /src/index.css, /src/App.tsx, /src/shop/pages/OrderPage.tsx

@@ -1,0 +1,13 @@
+npm warn deprecated three-mesh-bvh@0.7.8: Deprecated due to three.js version incompatibility. Please use v0.8.0, instead.
+npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+> shirt-designer@1.4.2 prepare
+> husky
+
+.git can't be found
+added 448 packages, and audited 449 packages in 8s
+
+156 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities

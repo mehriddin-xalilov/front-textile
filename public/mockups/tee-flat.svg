@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1120" width="1000" height="1120">
+  <!-- Tekis (flat) futbolka: tirikchilik uslubidagi mahsulot rasmi. Rang __BODY__ bilan almashtiriladi. -->
+  <defs>
+    <linearGradient id="fold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#000" stop-opacity="0.13"/>
+      <stop offset="0.09" stop-color="#000" stop-opacity="0.04"/>
+      <stop offset="0.30" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="0.50" stop-color="#fff" stop-opacity="0.08"/>
+      <stop offset="0.70" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="0.91" stop-color="#000" stop-opacity="0.04"/>
+      <stop offset="1"    stop-color="#000" stop-opacity="0.13"/>
+    </linearGradient>
+    <linearGradient id="vert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#fff" stop-opacity="0.05"/>
+      <stop offset="0.45" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.86" stop-color="#000" stop-opacity="0.02"/>
+      <stop offset="1"    stop-color="#000" stop-opacity="0.12"/>
+    </linearGradient>
+    <clipPath id="tee"><path d="M 500 112
+C 456 112, 418 121, 388 138
+C 352 158, 286 186, 214 214
+C 186 225, 172 243, 168 270
+L 142 414
+C 137 444, 152 466, 182 472
+L 286 492
+C 300 495, 308 505, 308 520
+L 308 1016
+C 308 1040, 322 1052, 346 1052
+L 654 1052
+C 678 1052, 692 1040, 692 1016
+L 692 520
+C 692 505, 700 495, 714 492
+L 818 472
+C 848 466, 863 444, 858 414
+L 832 270
+C 828 243, 814 225, 786 214
+C 714 186, 648 158, 612 138
+C 582 121, 544 112, 500 112 Z"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#tee)">
+    <rect x="0" y="0" width="1000" height="1120" fill="__BODY__"/>
+    <rect x="0" y="0" width="1000" height="1120" fill="url(#fold)"/>
+    <rect x="0" y="0" width="1000" height="1120" fill="url(#vert)"/>
+    <!-- yeng choklari -->
+    <path d="M308 520 L308 1052" stroke="#000" stroke-opacity="0.08" stroke-width="9" fill="none"/>
+    <path d="M692 520 L692 1052" stroke="#000" stroke-opacity="0.08" stroke-width="9" fill="none"/>
+    <path d="M182 472 L308 502" stroke="#000" stroke-opacity="0.07" stroke-width="11" fill="none"/>
+    <path d="M818 472 L692 502" stroke="#000" stroke-opacity="0.07" stroke-width="11" fill="none"/>
+    <!-- yeng manjeti -->
+    <path d="M143 424 L292 452" stroke="#000" stroke-opacity="0.07" stroke-width="7" fill="none"/>
+    <path d="M857 424 L708 452" stroke="#000" stroke-opacity="0.07" stroke-width="7" fill="none"/>
+    <!-- etak -->
+    <path d="M308 1010 L692 1010" stroke="#000" stroke-opacity="0.06" stroke-width="7" fill="none"/>
+  </g>
+
+  <!-- yoqa -->
+  <path d="M 388 138
+C 414 190, 450 212, 500 212
+C 550 212, 586 190, 612 138
+C 582 121, 544 112, 500 112
+C 456 112, 418 121, 388 138 Z" fill="__BODY__"/>
+  <path d="M 396 146
+C 422 192, 454 212, 500 212
+C 546 212, 578 192, 604 146" fill="none" stroke="#000" stroke-opacity="0.17" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 388 138
+C 414 190, 450 212, 500 212
+C 550 212, 586 190, 612 138
+C 582 121, 544 112, 500 112
+C 456 112, 418 121, 388 138 Z" fill="none" stroke="#000" stroke-opacity="0.10" stroke-width="3"/>
+
+  <!-- tashqi kontur -->
+  <path d="M 500 112
+C 456 112, 418 121, 388 138
+C 352 158, 286 186, 214 214
+C 186 225, 172 243, 168 270
+L 142 414
+C 137 444, 152 466, 182 472
+L 286 492
+C 300 495, 308 505, 308 520
+L 308 1016
+C 308 1040, 322 1052, 346 1052
+L 654 1052
+C 678 1052, 692 1040, 692 1016
+L 692 520
+C 692 505, 700 495, 714 492
+L 818 472
+C 848 466, 863 444, 858 414
+L 832 270
+C 828 243, 814 225, 786 214
+C 714 186, 648 158, 612 138
+C 582 121, 544 112, 500 112 Z" fill="none" stroke="#000" stroke-opacity="0.13" stroke-width="3"/>
+</svg>
