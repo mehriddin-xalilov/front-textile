@@ -1,0 +1,49 @@
+name: Deploy sayt
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-front
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Paketlar
+        run: npm ci
+
+      - name: Tekshirish (tsc)
+        run: npx tsc --noEmit
+
+      - name: Build
+        env:
+          VITE_API_ROOT: ${{ secrets.VITE_API_ROOT }}
+        run: npm run build
+
+      - name: SSH kalitini tayyorlash
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Serverga yuklash
+        run: |
+          rsync -az --delete dist/ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/"
+
+      - name: Tekshirish
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "${{ secrets.SITE_URL }}")
+          echo "Sayt javobi: $code"
+          test "$code" = "200"
