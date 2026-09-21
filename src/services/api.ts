@@ -101,6 +101,8 @@ export const api = {
   adminSaveDesign: (id: string | number, body: Record<string, unknown>) => request<{ data: any }>(`/admin/designs/${id}`, { method: 'PUT', json: body }).then((r) => r.data),
   templates: () => request<{ data: Template[] }>('/templates').then((r) => r.data),
   template: (id: number | string) => request<{ data: Template }>(`/templates/${id}`).then((r) => r.data),
+  checkPhone: (phone: string) =>
+    request<{ data: { exists: boolean; phone_number: string } }>('/auth/check', { method: 'POST', json: { phone_number: phone } }).then((r) => r.data),
   addresses: () => request<{ data: Address[] }>('/addresses').then((r) => r.data),
   createAddress: (data: Partial<Address>) => request<{ data: Address }>('/addresses', { method: 'POST', json: data }).then((r) => r.data),
   updateAddress: (id: number, data: Partial<Address>) => request<{ data: Address }>(`/addresses/${id}`, { method: 'PUT', json: data }).then((r) => r.data),
