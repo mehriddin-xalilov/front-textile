@@ -129,6 +129,8 @@ export const api = {
   adminSaveDesign: (id: string | number, body: Record<string, unknown>) => request<{ data: any }>(`/admin/designs/${id}`, { method: 'PUT', json: body }).then((r) => r.data),
   templates: () => request<{ data: Template[] }>('/templates').then((r) => r.data),
   template: (id: number | string) => request<{ data: Template }>(`/templates/${id}`).then((r) => r.data),
+  trackClick: (token: string, path: string) =>
+    request<unknown>('/track/click', { method: 'POST', json: { token, path } }).catch(() => null),
   checkPhone: (phone: string) =>
     request<{ data: { exists: boolean; phone_number: string } }>('/auth/check', { method: 'POST', json: { phone_number: phone } }).then((r) => r.data),
   addresses: () => request<{ data: Address[] }>('/addresses').then((r) => r.data),
@@ -160,7 +162,11 @@ export const api = {
       return r.data.user;
     }),
   register: (first_name: string, phone_number: string, password: string) =>
-    request<{ data: { user: User; token: string } }>('/auth/register', { method: 'POST', json: { first_name, phone_number, password } }).then((r) => {
+    request<{ data: { user: User; token: string } }>('/auth/register', {
+      method: 'POST',
+      // B2B xatidan kelgan bo'lsa lid tokeni ham yuboriladi (admin panelda "ro'yxatdan o'tdi" ko'rinadi)
+      json: { first_name, phone_number, password, lead_token: localStorage.getItem('tx_lead') || undefined },
+    }).then((r) => {
       setToken(r.data.token);
       return r.data.user;
     }),

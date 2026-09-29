@@ -278,6 +278,16 @@ export const App: React.FC = () => {
   const isEmbed = new URLSearchParams(location.search).get('embed') === 'view';
   const lang = useShopStore((s) => s.lang);
 
+  // B2B kampaniya: xatdagi havola `?c=<token>` bilan keladi — bir marta saqlab, serverga "bosildi" deb yozamiz
+  useEffect(() => {
+    const token = new URLSearchParams(location.search).get('c');
+    if (token && /^[A-Za-z0-9]{4,20}$/.test(token)) {
+      localStorage.setItem('tx_lead', token);
+      api.trackClick(token, location.pathname);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     if (!loaded && !location.pathname.startsWith('/studio') && !isEmbed) bootstrap();
     // eslint-disable-next-line react-hooks/exhaustive-deps
