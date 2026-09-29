@@ -174,7 +174,7 @@ export const OrderModal: React.FC<Props> = ({ canvas3DRef }) => {
             {step && <div className="text-xs text-primary-600">{step}</div>}
             {error && <div className="text-xs text-rose-400">{error}</div>}
 
-            {!user && <div className="text-xs text-amber-300">Buyurtma berish uchun avval kiring.</div>}
+            {!user && <div className="text-xs text-amber-600">Buyurtma berish uchun avval kiring.</div>}
             <button disabled={busy} className="w-full py-3 rounded-xl bg-gradient-to-r from-primary-600 to-primary-500 text-white text-sm font-bold disabled:opacity-60">
               {busy ? 'Kuting...' : user ? 'Buyurtma berish' : 'Kirish va buyurtma berish'}
             </button>

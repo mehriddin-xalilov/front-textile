@@ -160,21 +160,6 @@ export const StudioApp: React.FC = () => {
     return <EmbedViewer canvas3DRef={canvas3DRef} />;
   }
 
-  // Kirmagan foydalanuvchi konstruktorga kirolmaydi
-  if (!shopLoading && !user && !designId) {
-    return (
-      <div className="h-screen w-screen bg-white flex flex-col items-center justify-center gap-4 text-center p-6">
-        <div className="text-2xl font-black text-slate-900">{t('Konstruktor')}</div>
-        <p className="text-slate-600 max-w-sm">{t("Konstruktorga kirish uchun avval ro'yxatdan o'ting yoki kiring.")}</p>
-        <div className="flex gap-3">
-          <a href="/" className="px-4 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-sm">{t('Bosh sahifaga')}</a>
-          <button onClick={() => setAuthOpen(true)} className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-primary-600 to-primary-500 text-white text-sm font-bold">{t("Kirish / Ro'yxatdan o'tish")}</button>
-        </div>
-        <AuthModal />
-      </div>
-    );
-  }
-
   return (
     <div className="flex flex-col h-screen w-screen overflow-hidden bg-white font-sans text-slate-800 select-none">
       {/* Top Navigation Bar */}
