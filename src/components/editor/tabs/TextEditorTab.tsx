@@ -1,4 +1,5 @@
 import React from 'react';
+import { ColorField } from '../../common/ColorField';
 import { Plus, Sparkles, Sliders, Italic, Bold } from 'lucide-react';
 import { useEditorStore } from '../../../store/editorStore';
 import { TextLayer } from '../../../types/editor';
@@ -237,27 +238,14 @@ export const TextEditorTab: React.FC = () => {
             <div className="space-y-1.5">
               <label className="text-xs text-slate-500">Text Color</label>
               <div className="flex items-center gap-2">
-                <input
-                  type="color"
-                  value={selectedLayer.fillColor}
-                  onChange={(e) => updateLayer(selectedLayer.id, { fillColor: e.target.value })}
-                  className="w-7 h-7 rounded-lg cursor-pointer bg-transparent border-0"
-                />
-                <span className="text-[11px] font-mono text-slate-600 uppercase">
-                  {selectedLayer.fillColor}
-                </span>
+                <ColorField value={selectedLayer.fillColor} onChange={(c) => updateLayer(selectedLayer.id, { fillColor: c })} />
               </div>
             </div>
 
             <div className="space-y-1.5">
               <label className="text-xs text-slate-500">Stroke / Outline</label>
               <div className="flex items-center gap-2">
-                <input
-                  type="color"
-                  value={selectedLayer.strokeColor || '#000000'}
-                  onChange={(e) => updateLayer(selectedLayer.id, { strokeColor: e.target.value })}
-                  className="w-7 h-7 rounded-lg cursor-pointer bg-transparent border-0"
-                />
+                <ColorField value={selectedLayer.strokeColor || '#000000'} onChange={(c) => updateLayer(selectedLayer.id, { strokeColor: c })} showHex={false} />
                 <input
                   type="range"
                   min="0"

@@ -1,5 +1,5 @@
-import { ColorField } from '../ColorField';
 import React from 'react';
+import { ColorField } from '../../common/ColorField';
 import {
   Shapes,
   Sparkles,
@@ -134,27 +134,14 @@ export const ClipartTab: React.FC = () => {
             <div className="space-y-1.5">
               <label className="text-xs text-slate-500">Fill Color</label>
               <div className="flex items-center gap-2">
-                <input
-                  type="color"
-                  value={selectedShape.fillColor}
-                  onChange={(e) => updateLayer(selectedShape.id, { fillColor: e.target.value })}
-                  className="w-7 h-7 rounded-lg cursor-pointer bg-transparent border-0"
-                />
-                <span className="text-[11px] font-mono text-slate-600 uppercase">
-                  {selectedShape.fillColor}
-                </span>
+                <ColorField value={selectedShape.fillColor} onChange={(c) => updateLayer(selectedShape.id, { fillColor: c })} />
               </div>
             </div>
 
             <div className="space-y-1.5">
               <label className="text-xs text-slate-500">Border / Stroke</label>
               <div className="flex items-center gap-2">
-                <input
-                  type="color"
-                  value={selectedShape.strokeColor || '#000000'}
-                  onChange={(e) => updateLayer(selectedShape.id, { strokeColor: e.target.value })}
-                  className="w-7 h-7 rounded-lg cursor-pointer bg-transparent border-0"
-                />
+                <ColorField value={selectedShape.strokeColor || '#000000'} onChange={(c) => updateLayer(selectedShape.id, { strokeColor: c })} showHex={false} />
                 <input
                   type="range"
                   min="0"
