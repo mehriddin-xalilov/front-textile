@@ -20,6 +20,14 @@ import { t } from './i18n';
  * Ota oyna postMessage bilan dizaynni yuboradi: { type: 'tx:load', product: slug, canvas: {colors, layers} }.
  * Admin panel shu rejimda buyurtma/dizaynni xuddi konstruktordagidek ko'rsatadi.
  */
+/** Sahna o'rnida yumshoq yuklanish holati (model/rang tayyor bo'lguncha). */
+const SceneLoader: React.FC = () => (
+  <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-b from-white to-slate-100">
+    <div className="w-9 h-9 rounded-full border-[3px] border-slate-200 border-t-primary-600 animate-spin" />
+    <span className="text-xs text-slate-500">{t('Yuklanmoqda...')}</span>
+  </div>
+);
+
 const EmbedViewer: React.FC<{ canvas3DRef: React.RefObject<HTMLCanvasElement> }> = ({ canvas3DRef }) => {
   const loadProject = useEditorStore((s) => s.loadProject);
   const setColor = useEditorStore((s) => s.setColor);
@@ -56,7 +64,7 @@ const EmbedViewer: React.FC<{ canvas3DRef: React.RefObject<HTMLCanvasElement> }>
 
   return (
     <div className="h-screen w-screen bg-gradient-to-b from-white to-slate-100">
-      <StudioScene canvasRef={canvas3DRef} background="light" />
+      {product && !pending ? <StudioScene canvasRef={canvas3DRef} background="light" /> : <SceneLoader />}
     </div>
   );
 };
@@ -97,8 +105,12 @@ export const StudioApp: React.FC = () => {
   if (hashToken) { setToken(hashToken); window.history.replaceState({}, '', window.location.pathname + window.location.search); }
   const loadProject = useEditorStore((s) => s.loadProject);
   const setColor = useEditorStore((s) => s.setColor);
+  // Mahsulot, rang va dizayn to'liq qo'yilguncha 3D sahna chizilmaydi — aks holda avval oq
+  // model, keyin rang, keyin qatlamlar ketma-ket paydo bo'lib "lipillaydi"
+  const [ready, setReady] = useState(false);
   useEffect(() => {
     (async () => {
+      try {
       if (!loadedProduct) await bootstrap(productSlug);
       else if (productSlug && loadedProduct.slug !== productSlug) await selectProduct(productSlug);
       // Tayyor dizayn: mahsulot + rang + qatlamlar yuklanadi, mijoz o'zgartirib buyurtma beradi
@@ -121,6 +133,9 @@ export const StudioApp: React.FC = () => {
         const c = t.canvas || {};
         if (c.layers) loadProject({ version: '2', timestamp: Date.now(), title: t.template_title || 'template', colors: c.colors, layers: c.layers });
         if (c.colors?.body) setColor('all', c.colors.body);
+      }
+      } finally {
+        setReady(true);
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -199,7 +214,7 @@ export const StudioApp: React.FC = () => {
                       : 'w-full'
                   }`}
                 >
-                  <StudioScene canvasRef={canvas3DRef} />
+                  {ready && loadedProduct ? <StudioScene canvasRef={canvas3DRef} /> : <SceneLoader />}
                 </div>
               )}
 
@@ -236,8 +251,8 @@ export const StudioApp: React.FC = () => {
       <ExportModal canvas3DRef={canvas3DRef} />
       <AuthModal />
       <OrderModal canvas3DRef={canvas3DRef} />
-      {(shopLoading && !loadedProduct || shopError) && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-white/80 text-sm text-slate-600">{shopError || 'Yuklanmoqda...'}</div>
+      {shopError && (
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-white/90 text-sm text-rose-600">{shopError}</div>
       )}
       <ProjectSaveModal />
     </div>
