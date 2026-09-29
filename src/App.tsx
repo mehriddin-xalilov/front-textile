@@ -5,11 +5,6 @@ import { StudioScene } from './components/3d/StudioScene';
 import { Canvas2DStage } from './components/editor/Canvas2DStage';
 import { ExportModal } from './components/export/ExportModal';
 import { ProjectSaveModal } from './components/export/ProjectSaveModal';
-import { FeedbackModal } from './components/feedback/FeedbackModal';
-import { LandingPage } from './components/landing/LandingPage';
-import { ChangelogPage } from './components/changelog/ChangelogPage';
-import { TermsPage } from './components/legal/TermsPage';
-import { PrivacyPolicyPage } from './components/legal/PrivacyPolicyPage';
 import { MobileBottomDock } from './components/editor/mobile/MobileBottomDock';
 import { MobileBottomSheet } from './components/editor/mobile/MobileBottomSheet';
 import { MobileZoneBar } from './components/editor/mobile/MobileZoneBar';
@@ -167,13 +162,9 @@ export const StudioApp: React.FC = () => {
 
       {/* Main Content Router */}
       <div className="flex-1 overflow-hidden relative">
-        {activePage === 'landing' && <LandingPage />}
 
-        {activePage === 'changelog' && <ChangelogPage />}
 
-        {activePage === 'terms' && <TermsPage />}
 
-        {activePage === 'privacy' && <PrivacyPolicyPage />}
 
         {activePage === 'studio' && (
           <div className="w-full h-full flex flex-row overflow-hidden relative">
@@ -234,7 +225,6 @@ export const StudioApp: React.FC = () => {
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-white/80 text-sm text-slate-600">{shopError || 'Yuklanmoqda...'}</div>
       )}
       <ProjectSaveModal />
-      <FeedbackModal />
     </div>
   );
 };

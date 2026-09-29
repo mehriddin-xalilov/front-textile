@@ -1,3 +1,4 @@
+import { t } from '../../i18n';
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import {
   RotateCw,
@@ -329,7 +330,7 @@ export const Canvas2DStage: React.FC = () => {
         {/* Printable Safety Margin Guide */}
         <div className="absolute inset-5 sm:inset-8 border border-dashed border-primary-400/40 rounded-2xl pointer-events-none flex flex-col justify-between p-2.5 z-10">
           <span className="text-[10px] font-bold text-primary-400/80 tracking-wider uppercase">
-            {activeZone.replace('_', ' ')} Printable Area
+            {activeZone.replace('_', ' ')} {t('bosma maydoni')}
           </span>
           <span className="text-[10px] font-semibold text-primary-400/50 self-end">12" × 16"</span>
         </div>
@@ -404,7 +405,7 @@ export const Canvas2DStage: React.FC = () => {
                     <div
                       className="w-8 h-8 rounded-full bg-primary-600 border-2 border-white shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing hover:scale-110 active:scale-95 transition-transform touch-none"
                       onPointerDown={(e) => handleStartRotate(layer, e)}
-                      title="Rotate Layer"
+                      title={t('Burish')}
                     >
                       <RotateCw className="w-4 h-4 text-white" />
                     </div>
@@ -415,7 +416,7 @@ export const Canvas2DStage: React.FC = () => {
                   <div
                     className="absolute -bottom-3.5 -right-3.5 w-8 h-8 rounded-xl bg-primary-600 border-2 border-white shadow-xl cursor-nwse-resize pointer-events-auto flex items-center justify-center hover:scale-110 active:scale-95 transition-transform touch-none"
                     onPointerDown={(e) => handleStartScale(layer, e)}
-                    title="Resize Layer"
+                    title={t('O\'lchamini o\'zgartirish')}
                   >
                     <Maximize2 className="w-4 h-4 text-white" />
                   </div>
@@ -438,20 +439,20 @@ export const Canvas2DStage: React.FC = () => {
         <div className="fixed bottom-24 left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 lg:mt-3 flex items-center gap-1.5 p-1.5 bg-white/95 backdrop-blur-xl rounded-2xl border border-slate-200/80 shadow-2xl z-30 animate-fade-in pointer-events-auto">
           <div className="px-2 py-1 flex items-center gap-1 text-[11px] font-bold text-slate-600">
             <Move className="w-3 h-3 text-primary-400" />
-            <span className="hidden sm:inline">Layer:</span>
+            <span className="hidden sm:inline">{t('Qatlam:')}</span>
             <span className="max-w-[80px] truncate">{selectedLayer.name}</span>
           </div>
           <div className="w-px h-4 bg-slate-200" />
           <button
             onClick={centerLayerH}
-            title="Center Horizontal"
+            title={t('Gorizontal markazlash')}
             className="p-1.5 sm:p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition active:scale-95"
           >
             <AlignCenterHorizontal className="w-4 h-4" />
           </button>
           <button
             onClick={centerLayerV}
-            title="Center Vertical"
+            title={t('Vertikal markazlash')}
             className="p-1.5 sm:p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition active:scale-95"
           >
             <AlignCenterVertical className="w-4 h-4" />
@@ -459,14 +460,14 @@ export const Canvas2DStage: React.FC = () => {
           <div className="w-px h-4 bg-slate-200" />
           <button
             onClick={() => duplicateLayer(selectedLayer.id)}
-            title="Duplicate Layer"
+            title={t('Nusxalash')}
             className="p-1.5 sm:p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition active:scale-95"
           >
             <Copy className="w-4 h-4" />
           </button>
           <button
             onClick={() => deleteLayer(selectedLayer.id)}
-            title="Delete Layer"
+            title={t('O\'chirish')}
             className="p-1.5 sm:p-2 rounded-xl text-danger-400 hover:text-danger-200 hover:bg-danger-950/60 transition active:scale-95"
           >
             <Trash2 className="w-4 h-4" />

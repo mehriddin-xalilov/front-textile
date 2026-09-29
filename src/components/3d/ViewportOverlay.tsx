@@ -1,3 +1,4 @@
+import { t } from '../../i18n';
 import React from 'react';
 import { RotateCw, Sun, Grid3X3, Compass, Sunrise, Sparkles, CloudSun, MoonStar, Circle, LucideIcon } from 'lucide-react';
 import { useSceneStore, LightingPreset } from '../../store/sceneStore';
@@ -43,7 +44,7 @@ export const ViewportOverlay: React.FC = () => {
 
           <button
             onClick={() => setCameraPreset('isometric')}
-            title="Switch to 3D Isometric Perspective"
+            title={t('3D izometrik burchak')}
             className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-semibold backdrop-blur-md border transition-all ${
               cameraPreset === 'isometric'
                 ? 'bg-primary-600 border-primary-500 text-white shadow-md shadow-primary-600/30'
@@ -51,7 +52,7 @@ export const ViewportOverlay: React.FC = () => {
             }`}
           >
             <Compass className="w-3.5 h-3.5 text-primary-400" />
-            <span>3D Angle</span>
+            <span>{t('3D burchak')}</span>
           </button>
         </div>
 
@@ -61,7 +62,7 @@ export const ViewportOverlay: React.FC = () => {
           <div className="hidden md:flex items-center gap-1 p-1 bg-white/80 backdrop-blur-md rounded-xl border border-slate-200 shadow-lg">
             <div className="px-2 py-1 text-slate-500 text-xs flex items-center gap-1 font-medium">
               <Sun className="w-3.5 h-3.5 text-accent-400" />
-              <span className="hidden sm:inline">Light:</span>
+              <span className="hidden sm:inline">{t('Yorug\'lik:')}</span>
             </div>
             {lightingPresets.map((l) => (
               <button
@@ -95,7 +96,7 @@ export const ViewportOverlay: React.FC = () => {
 
           <button
             onClick={toggleWireframe}
-            title="Toggle Wireframe Mesh"
+            title={t('Sim karkas')}
             className={`p-1.5 sm:p-2 rounded-xl border backdrop-blur-md transition-all ${
               wireframe
                 ? 'bg-primary-600 border-primary-500 text-white'
@@ -118,13 +119,13 @@ export const ViewportOverlay: React.FC = () => {
           }`}
         >
           <RotateCw className={`w-3.5 h-3.5 ${isTurntableActive ? 'animate-spin' : ''}`} />
-          <span>{isTurntableActive ? 'Turntable' : '360° Spin'}</span>
+          <span>{isTurntableActive ? t('Aylanmoqda') : t('360° aylantirish')}</span>
         </button>
 
         <div className="hidden md:flex items-center gap-3 px-3 py-1.5 bg-white/70 backdrop-blur-md rounded-xl border border-slate-200 text-[11px] text-slate-500 font-medium">
-          <span>• Left Click + Drag: Rotate</span>
-          <span>• Scroll: Zoom</span>
-          <span>• Right Click: Pan</span>
+          <span>{t('• Chap tugma + surish: aylantirish')}</span>
+          <span>{t('• G\'ildirak: kattalashtirish')}</span>
+          <span>{t('• O\'ng tugma: surish')}</span>
         </div>
       </div>
     </div>

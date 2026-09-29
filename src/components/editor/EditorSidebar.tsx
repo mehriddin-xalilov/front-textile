@@ -1,3 +1,4 @@
+import { t } from '../../i18n';
 import React from 'react';
 import { Palette, UploadCloud, Type, Shapes, Layers } from 'lucide-react';
 import { useEditorStore } from '../../store/editorStore';
@@ -18,11 +19,11 @@ export const EditorSidebar: React.FC<EditorSidebarProps> = ({ className = '' }) 
   const layers = useEditorStore((s) => s.layers);
 
   const tabs: { id: typeof activeTab; label: string; icon: React.ReactNode; badge?: number }[] = [
-    { id: 'colors', label: 'Garment', icon: <Palette className="w-4 h-4" /> },
-    { id: 'text', label: 'Typography', icon: <Type className="w-4 h-4" /> },
-    { id: 'upload', label: 'Graphics', icon: <UploadCloud className="w-4 h-4" /> },
-    { id: 'clipart', label: 'Cliparts', icon: <Shapes className="w-4 h-4" /> },
-    { id: 'layers', label: 'Layers', icon: <Layers className="w-4 h-4" />, badge: layers.length },
+    { id: 'colors', label: t('Kiyim'), icon: <Palette className="w-4 h-4" /> },
+    { id: 'text', label: t('Matn'), icon: <Type className="w-4 h-4" /> },
+    { id: 'upload', label: t('Rasm'), icon: <UploadCloud className="w-4 h-4" /> },
+    { id: 'clipart', label: t('Logolar'), icon: <Shapes className="w-4 h-4" /> },
+    { id: 'layers', label: t('Qatlamlar'), icon: <Layers className="w-4 h-4" />, badge: layers.length },
   ];
 
   return (

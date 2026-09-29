@@ -1,3 +1,4 @@
+import { t } from '../../../i18n';
 import React, { useRef, useState } from 'react';
 import { UploadCloud, FlipHorizontal, FlipVertical, Sliders, Sparkles } from 'lucide-react';
 import { useEditorStore } from '../../../store/editorStore';
@@ -136,8 +137,8 @@ export const ImageUploadTab: React.FC = () => {
         <div className="w-12 h-12 rounded-2xl bg-primary-600/20 border border-primary-500/30 flex items-center justify-center mb-3 text-primary-400">
           <UploadCloud className="w-6 h-6" />
         </div>
-        <div className="text-xs font-bold text-slate-800">Click to Upload Artwork</div>
-        <div className="text-[11px] text-slate-500 mt-1">PNG, JPG, SVG, WebP (up to 20MB)</div>
+        <div className="text-xs font-bold text-slate-800">{t('Rasm yuklash uchun bosing')}</div>
+        <div className="text-[11px] text-slate-500 mt-1">{t('PNG, JPG, SVG, WebP (20MB gacha)')}</div>
       </div>
 
       {/* Selected Image Layer Controls */}
@@ -146,12 +147,12 @@ export const ImageUploadTab: React.FC = () => {
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-primary-300 flex items-center gap-1.5">
               <Sliders className="w-3.5 h-3.5" />
-              Adjust Image ({selectedLayer.name})
+              {t('Rasmni sozlash')} ({selectedLayer.name})
             </span>
             <div className="flex items-center gap-1">
               <button
                 onClick={() => updateLayer(selectedLayer.id, { flipX: !selectedLayer.flipX })}
-                title="Flip Horizontal"
+                title={t('Gorizontal aylantirish')}
                 className={`p-1.5 rounded-lg border text-xs ${
                   selectedLayer.flipX
                     ? 'bg-primary-600 border-primary-500 text-white'
@@ -162,7 +163,7 @@ export const ImageUploadTab: React.FC = () => {
               </button>
               <button
                 onClick={() => updateLayer(selectedLayer.id, { flipY: !selectedLayer.flipY })}
-                title="Flip Vertical"
+                title={t('Vertikal aylantirish')}
                 className={`p-1.5 rounded-lg border text-xs ${
                   selectedLayer.flipY
                     ? 'bg-primary-600 border-primary-500 text-white'
@@ -177,7 +178,7 @@ export const ImageUploadTab: React.FC = () => {
           {/* Scale Slider */}
           <div className="space-y-1.5">
             <div className="flex justify-between text-xs text-slate-500">
-              <span>Size Scale</span>
+              <span>{t('O\'lcham')}</span>
               <span>{Math.round(selectedLayer.scale * 100)}%</span>
             </div>
             <input
@@ -194,7 +195,7 @@ export const ImageUploadTab: React.FC = () => {
           {/* Opacity Slider */}
           <div className="space-y-1.5">
             <div className="flex justify-between text-xs text-slate-500">
-              <span>Opacity</span>
+              <span>{t('Shaffoflik')}</span>
               <span>{Math.round(selectedLayer.opacity * 100)}%</span>
             </div>
             <input
@@ -213,7 +214,7 @@ export const ImageUploadTab: React.FC = () => {
           {/* Rotation Slider */}
           <div className="space-y-1.5">
             <div className="flex justify-between text-xs text-slate-500">
-              <span>Rotation</span>
+              <span>{t('Burilish')}</span>
               <span>{selectedLayer.rotation}°</span>
             </div>
             <input
@@ -231,16 +232,16 @@ export const ImageUploadTab: React.FC = () => {
 
           {/* Blend Mode */}
           <div className="space-y-1.5">
-            <label className="text-xs text-slate-500">Blend Mode</label>
+            <label className="text-xs text-slate-500">{t('Aralashtirish rejimi')}</label>
             <select
               value={selectedLayer.blendMode || 'source-over'}
               onChange={(e) => updateLayer(selectedLayer.id, { blendMode: e.target.value as any })}
               className="w-full bg-slate-100 border border-slate-200 rounded-xl px-3 py-1.5 text-xs text-slate-800 outline-none focus:border-primary-500"
             >
-              <option value="source-over">Normal</option>
-              <option value="multiply">Multiply (Vintage ink / fabric embed)</option>
-              <option value="screen">Screen (Light glow)</option>
-              <option value="overlay">Overlay (Textured)</option>
+              <option value="source-over">{t('Oddiy')}</option>
+              <option value="multiply">{t('Multiply (matoga singdirilgan)')}</option>
+              <option value="screen">{t('Screen (yorug\' nur)')}</option>
+              <option value="overlay">{t('Overlay (teksturali)')}</option>
             </select>
           </div>
         </div>
@@ -249,9 +250,7 @@ export const ImageUploadTab: React.FC = () => {
       {/* Preset Sample Graphics */}
       <div className="space-y-3">
         <label className="text-xs font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1.5">
-          <Sparkles className="w-3.5 h-3.5 text-primary-400" />
-          Sample Graphic Assets
-        </label>
+          <Sparkles className="w-3.5 h-3.5 text-primary-400" />{t('Namuna rasmlar')}</label>
         <div className="grid grid-cols-2 gap-2.5">
           {SAMPLE_GRAPHICS.map((g) => (
             <button

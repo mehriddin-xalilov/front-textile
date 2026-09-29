@@ -1,3 +1,4 @@
+import { t } from '../../../i18n';
 import React from 'react';
 import { ColorField } from '../../common/ColorField';
 import {
@@ -127,19 +128,19 @@ export const ClipartTab: React.FC = () => {
         <div className="p-4 bg-white/80 rounded-2xl border border-primary-500/30 space-y-4 shadow-xl">
           <span className="text-xs font-bold text-primary-300 flex items-center gap-1.5">
             <Sliders className="w-3.5 h-3.5" />
-            Customize Shape ({selectedShape.name})
+            {t('Shaklni sozlash')} ({selectedShape.name})
           </span>
 
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <label className="text-xs text-slate-500">Fill Color</label>
+              <label className="text-xs text-slate-500">{t('Rang')}</label>
               <div className="flex items-center gap-2">
                 <ColorField value={selectedShape.fillColor} onChange={(c) => updateLayer(selectedShape.id, { fillColor: c })} />
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-xs text-slate-500">Border / Stroke</label>
+              <label className="text-xs text-slate-500">{t('Kontur')}</label>
               <div className="flex items-center gap-2">
                 <ColorField value={selectedShape.strokeColor || '#000000'} onChange={(c) => updateLayer(selectedShape.id, { strokeColor: c })} showHex={false} />
                 <input
@@ -161,9 +162,7 @@ export const ClipartTab: React.FC = () => {
       {/* Geometric Badges & Shapes */}
       <div className="space-y-3">
         <label className="text-xs font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1.5">
-          <Shapes className="w-3.5 h-3.5 text-primary-400" />
-          Badges & Geometric Shapes
-        </label>
+          <Shapes className="w-3.5 h-3.5 text-primary-400" />{t('Shakllar')}</label>
         <div className="grid grid-cols-3 gap-2.5">
           {SHAPES.map((s) => (
             <button
@@ -198,9 +197,7 @@ export const ClipartTab: React.FC = () => {
 
       <div className="space-y-3">
         <label className="text-xs font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1.5">
-          <Sparkles className="w-3.5 h-3.5 text-accent-400" />
-          Vector Stamps & Crests
-        </label>
+          <Sparkles className="w-3.5 h-3.5 text-accent-400" />{t('Vektor belgilar')}</label>
         <div className="grid grid-cols-2 gap-2.5">
           {VECTOR_ICONS.map((v) => (
             <button

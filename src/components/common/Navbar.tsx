@@ -1,3 +1,4 @@
+import { t } from '../../i18n';
 import React from 'react';
 import {
   Shirt,
@@ -74,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
                 }`}
               >
                 <Box className="w-3.5 h-3.5" />
-                <span>3D View</span>
+                <span>{t('3D ko\'rinish')}</span>
               </button>
 
               <button
@@ -86,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
                 }`}
               >
                 <SplitSquareVertical className="w-3.5 h-3.5" />
-                <span>Split</span>
+                <span>{t('Ikkalasi')}</span>
               </button>
 
               <button
@@ -98,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
                 }`}
               >
                 <LayoutTemplate className="w-3.5 h-3.5" />
-                <span>2D Canvas</span>
+                <span>{t('2D maydon')}</span>
               </button>
             </div>
 
@@ -106,7 +107,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
               <button
                 onClick={undo}
                 disabled={pastLength === 0}
-                title="Undo (Ctrl+Z)"
+                title={t('Orqaga (Ctrl+Z)')}
                 className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 disabled:opacity-30 transition"
               >
                 <Undo2 className="w-4 h-4" />
@@ -114,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
               <button
                 onClick={redo}
                 disabled={futureLength === 0}
-                title="Redo (Ctrl+Y)"
+                title={t('Oldinga (Ctrl+Y)')}
                 className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 disabled:opacity-30 transition"
               >
                 <Redo2 className="w-4 h-4" />
@@ -132,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
                     ? 'bg-primary-600 text-white shadow'
                     : 'text-slate-500 hover:text-slate-900'
                 }`}
-                title="3D Garment View"
+                title={t('3D ko\'rinish')}
               >
                 <Box className="w-3.5 h-3.5" />
                 <span>3D</span>
@@ -145,7 +146,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
                     ? 'bg-primary-600 text-white shadow'
                     : 'text-slate-500 hover:text-slate-900'
                 }`}
-                title="2D Canvas Editor"
+                title={t('2D muharrir')}
               >
                 <LayoutTemplate className="w-3.5 h-3.5" />
                 <span>2D</span>
@@ -156,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
               <button
                 onClick={undo}
                 disabled={pastLength === 0}
-                title="Undo"
+                title={t('Orqaga')}
                 className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 disabled:opacity-25 transition"
               >
                 <Undo2 className="w-3.5 h-3.5" />
@@ -164,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
               <button
                 onClick={redo}
                 disabled={futureLength === 0}
-                title="Redo"
+                title={t('Oldinga')}
                 className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 disabled:opacity-25 transition"
               >
                 <Redo2 className="w-3.5 h-3.5" />

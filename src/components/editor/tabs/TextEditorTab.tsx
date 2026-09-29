@@ -1,3 +1,4 @@
+import { t } from '../../../i18n';
 import React from 'react';
 import { ColorField } from '../../common/ColorField';
 import { Plus, Sparkles, Sliders, Italic, Bold } from 'lucide-react';
@@ -160,18 +161,14 @@ export const TextEditorTab: React.FC = () => {
         onClick={handleAddNewText}
         className="w-full py-3 px-4 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-bold rounded-2xl shadow-lg shadow-primary-600/30 flex items-center justify-center gap-2 text-xs transition-all duration-200 hover:scale-[1.02]"
       >
-        <Plus className="w-4 h-4" />
-        Add New Text Layer
-      </button>
+        <Plus className="w-4 h-4" />{t('Yangi matn qo\'shish')}</button>
 
       {/* Selected Text Controls */}
       {selectedLayer ? (
         <div className="p-4 bg-white/80 rounded-2xl border border-primary-500/30 space-y-4 shadow-xl">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold text-primary-300 flex items-center gap-1.5">
-              <Sliders className="w-3.5 h-3.5" />
-              Edit Typography
-            </span>
+              <Sliders className="w-3.5 h-3.5" />{t('Matnni tahrirlash')}</span>
             <div className="flex items-center gap-1">
               <button
                 onClick={() =>
@@ -179,7 +176,7 @@ export const TextEditorTab: React.FC = () => {
                     fontWeight: selectedLayer.fontWeight === '900' ? '400' : '900',
                   })
                 }
-                title="Bold"
+                title={t('Qalin')}
                 className={`p-1.5 rounded-lg border text-xs ${
                   selectedLayer.fontWeight === '900'
                     ? 'bg-primary-600 border-primary-500 text-white'
@@ -194,7 +191,7 @@ export const TextEditorTab: React.FC = () => {
                     fontStyle: selectedLayer.fontStyle === 'italic' ? 'normal' : 'italic',
                   })
                 }
-                title="Italic"
+                title={t('Yotiq')}
                 className={`p-1.5 rounded-lg border text-xs ${
                   selectedLayer.fontStyle === 'italic'
                     ? 'bg-primary-600 border-primary-500 text-white'
@@ -208,7 +205,7 @@ export const TextEditorTab: React.FC = () => {
 
           {/* Text Input Area */}
           <div className="space-y-1.5">
-            <label className="text-xs text-slate-500">Content</label>
+            <label className="text-xs text-slate-500">{t('Matn')}</label>
             <textarea
               value={selectedLayer.text}
               onChange={(e) => updateLayer(selectedLayer.id, { text: e.target.value })}
@@ -219,7 +216,7 @@ export const TextEditorTab: React.FC = () => {
 
           {/* Font Family Selector */}
           <div className="space-y-1.5">
-            <label className="text-xs text-slate-500">Font Family</label>
+            <label className="text-xs text-slate-500">{t('Shrift')}</label>
             <select
               value={selectedLayer.fontFamily}
               onChange={(e) => updateLayer(selectedLayer.id, { fontFamily: e.target.value })}
@@ -236,14 +233,14 @@ export const TextEditorTab: React.FC = () => {
           {/* Colors: Fill & Stroke */}
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <label className="text-xs text-slate-500">Text Color</label>
+              <label className="text-xs text-slate-500">{t('Matn rangi')}</label>
               <div className="flex items-center gap-2">
                 <ColorField value={selectedLayer.fillColor} onChange={(c) => updateLayer(selectedLayer.id, { fillColor: c })} />
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-xs text-slate-500">Stroke / Outline</label>
+              <label className="text-xs text-slate-500">{t('Kontur')}</label>
               <div className="flex items-center gap-2">
                 <ColorField value={selectedLayer.strokeColor || '#000000'} onChange={(c) => updateLayer(selectedLayer.id, { strokeColor: c })} showHex={false} />
                 <input
@@ -255,7 +252,7 @@ export const TextEditorTab: React.FC = () => {
                     updateLayer(selectedLayer.id, { strokeWidth: parseInt(e.target.value) })
                   }
                   className="w-16 accent-primary-500 cursor-pointer h-1.5 bg-slate-100 rounded-lg"
-                  title="Outline thickness"
+                  title={t('Kontur qalinligi')}
                 />
               </div>
             </div>
@@ -264,7 +261,7 @@ export const TextEditorTab: React.FC = () => {
           {/* Curved Text Toggle */}
           <div className="p-3 bg-slate-100/60 rounded-xl space-y-2 border border-slate-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold text-slate-600">Curved / Arched Text</span>
+              <span className="text-xs font-semibold text-slate-600">{t('Egri (yoy) matn')}</span>
               <button
                 onClick={() => updateLayer(selectedLayer.id, { curved: !selectedLayer.curved })}
                 className={`px-2.5 py-0.5 rounded-lg text-xs font-semibold transition ${
@@ -273,14 +270,14 @@ export const TextEditorTab: React.FC = () => {
                     : 'bg-slate-200 text-slate-500 hover:text-slate-900'
                 }`}
               >
-                {selectedLayer.curved ? 'Enabled' : 'Off'}
+                {selectedLayer.curved ? t('Yoqilgan') : t('O\'chiq')}
               </button>
             </div>
 
             {selectedLayer.curved && (
               <div className="space-y-1 pt-1">
                 <div className="flex justify-between text-[11px] text-slate-500">
-                  <span>Curve Radius</span>
+                  <span>{t('Egrilik radiusi')}</span>
                   <span>{selectedLayer.curveRadius}px</span>
                 </div>
                 <input
@@ -302,7 +299,7 @@ export const TextEditorTab: React.FC = () => {
           <div className="space-y-2">
             <div className="space-y-1">
               <div className="flex justify-between text-xs text-slate-500">
-                <span>Font Size</span>
+                <span>{t('Shrift o\'lchami')}</span>
                 <span>{selectedLayer.fontSize}px</span>
               </div>
               <input
@@ -319,7 +316,7 @@ export const TextEditorTab: React.FC = () => {
 
             <div className="space-y-1">
               <div className="flex justify-between text-xs text-slate-500">
-                <span>Letter Spacing</span>
+                <span>{t('Harflar oralig\'i')}</span>
                 <span>{selectedLayer.letterSpacing}px</span>
               </div>
               <input
@@ -336,9 +333,7 @@ export const TextEditorTab: React.FC = () => {
           </div>
         </div>
       ) : (
-        <div className="p-4 bg-white/40 rounded-2xl border border-slate-200 text-center text-xs text-slate-500">
-          Click any text layer in the preview or add a new layer above to edit styling.
-        </div>
+        <div className="p-4 bg-white/40 rounded-2xl border border-slate-200 text-center text-xs text-slate-500">{t('Tahrirlash uchun matnni bosing yoki yuqoridan yangi matn qo\'shing.')}</div>
       )}
 
       {/* Typography Style Presets */}

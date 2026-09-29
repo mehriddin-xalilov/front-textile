@@ -1,3 +1,4 @@
+import { t } from '../../i18n';
 import React, { useRef } from 'react';
 import {
   X,
@@ -98,10 +99,8 @@ export const ProjectSaveModal: React.FC = () => {
               <FolderOpen className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base font-bold">Project Save & Load</h2>
-              <p className="text-xs text-slate-500">
-                Save your work as a file or sync with local storage
-              </p>
+              <h2 className="text-base font-bold">{t('Loyihani saqlash / ochish')}</h2>
+              <p className="text-xs text-slate-500">{t('Ishingizni fayl sifatida yoki brauzerda saqlang')}</p>
             </div>
           </div>
           <button
@@ -131,12 +130,8 @@ export const ProjectSaveModal: React.FC = () => {
                 <FileCode className="w-5 h-5" />
               </div>
               <div>
-                <div className="text-xs font-bold text-slate-800">
-                  Export Project File (.JSON)
-                </div>
-                <div className="text-[11px] text-slate-500">
-                  Download portable project file to keep or share
-                </div>
+                <div className="text-xs font-bold text-slate-800">{t('Loyiha faylini yuklab olish (.JSON)')}</div>
+                <div className="text-[11px] text-slate-500">{t('Saqlash yoki ulashish uchun loyiha fayli')}</div>
               </div>
             </div>
             <Download className="w-4 h-4 text-slate-400 group-hover:text-primary-400" />
@@ -152,10 +147,8 @@ export const ProjectSaveModal: React.FC = () => {
                 <Upload className="w-5 h-5" />
               </div>
               <div>
-                <div className="text-xs font-bold text-slate-800">Open Project File (.JSON)</div>
-                <div className="text-[11px] text-slate-500">
-                  Resume a previously exported design
-                </div>
+                <div className="text-xs font-bold text-slate-800">{t('Loyiha faylini ochish (.JSON)')}</div>
+                <div className="text-[11px] text-slate-500">{t('Avval yuklab olingan dizaynni davom ettirish')}</div>
               </div>
             </div>
             <FolderOpen className="w-4 h-4 text-slate-400 group-hover:text-success-400" />
@@ -171,10 +164,8 @@ export const ProjectSaveModal: React.FC = () => {
                 <HardDrive className="w-5 h-5" />
               </div>
               <div>
-                <div className="text-xs font-bold text-slate-800">Save to Browser Storage</div>
-                <div className="text-[11px] text-slate-500">
-                  Quickly save state in this browser session
-                </div>
+                <div className="text-xs font-bold text-slate-800">{t('Brauzerda saqlash')}</div>
+                <div className="text-[11px] text-slate-500">{t('Shu brauzerda tez saqlash')}</div>
               </div>
             </div>
             <Save className="w-4 h-4 text-slate-400 group-hover:text-accent-400" />
@@ -190,10 +181,8 @@ export const ProjectSaveModal: React.FC = () => {
                 <FolderOpen className="w-5 h-5" />
               </div>
               <div>
-                <div className="text-xs font-bold text-slate-800">Restore Browser Save</div>
-                <div className="text-[11px] text-slate-500">
-                  Restore the last auto-saved state
-                </div>
+                <div className="text-xs font-bold text-slate-800">{t('Brauzerdan tiklash')}</div>
+                <div className="text-[11px] text-slate-500">{t('Oxirgi saqlangan holatni tiklash')}</div>
               </div>
             </div>
             <FolderOpen className="w-4 h-4 text-slate-400 group-hover:text-secondary-400" />
@@ -202,7 +191,7 @@ export const ProjectSaveModal: React.FC = () => {
           {/* Reset Project */}
           <button
             onClick={() => {
-              if (confirm('Are you sure you want to reset all designs?')) {
+              if (confirm(t('Barcha dizayn o\'chirilsinmi?'))) {
                 resetProject();
                 setOpen(false);
               }
@@ -214,8 +203,8 @@ export const ProjectSaveModal: React.FC = () => {
                 <RotateCcw className="w-4 h-4" />
               </div>
               <div>
-                <div className="text-xs font-bold text-danger-300">Reset Design Canvas</div>
-                <div className="text-[10px] text-danger-400/80">Clear all layers & start fresh</div>
+                <div className="text-xs font-bold text-danger-300">{t('Dizaynni tozalash')}</div>
+                <div className="text-[10px] text-danger-400/80">{t('Barcha qatlamlarni o\'chirib, boshidan boshlash')}</div>
               </div>
             </div>
           </button>

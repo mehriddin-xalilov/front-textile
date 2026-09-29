@@ -1,3 +1,4 @@
+import { t } from '../../../i18n';
 import React from 'react';
 import { Palette, Type, UploadCloud, Shapes, Layers, ChevronDown, X } from 'lucide-react';
 import { useEditorStore } from '../../../store/editorStore';
@@ -21,11 +22,11 @@ export const MobileBottomSheet: React.FC<MobileBottomSheetProps> = ({ isOpen, on
   if (!isOpen) return null;
 
   const tabs: { id: typeof activeTab; label: string; icon: React.ReactNode; badge?: number }[] = [
-    { id: 'colors', label: 'Garment', icon: <Palette className="w-4 h-4" /> },
-    { id: 'text', label: 'Typography', icon: <Type className="w-4 h-4" /> },
-    { id: 'upload', label: 'Graphics', icon: <UploadCloud className="w-4 h-4" /> },
-    { id: 'clipart', label: 'Cliparts', icon: <Shapes className="w-4 h-4" /> },
-    { id: 'layers', label: 'Layers', icon: <Layers className="w-4 h-4" />, badge: layers.length },
+    { id: 'colors', label: t('Kiyim'), icon: <Palette className="w-4 h-4" /> },
+    { id: 'text', label: t('Matn'), icon: <Type className="w-4 h-4" /> },
+    { id: 'upload', label: t('Rasm'), icon: <UploadCloud className="w-4 h-4" /> },
+    { id: 'clipart', label: t('Logolar'), icon: <Shapes className="w-4 h-4" /> },
+    { id: 'layers', label: t('Qatlamlar'), icon: <Layers className="w-4 h-4" />, badge: layers.length },
   ];
 
   return (
@@ -49,7 +50,7 @@ export const MobileBottomSheet: React.FC<MobileBottomSheetProps> = ({ isOpen, on
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
               <span className="text-xs font-bold text-slate-900 uppercase tracking-wider">
-                {tabs.find((t) => t.id === activeTab)?.label || 'Tools'}
+                {tabs.find((t) => t.id === activeTab)?.label || t('Asboblar')}
               </span>
             </div>
 

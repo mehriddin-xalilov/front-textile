@@ -1,3 +1,4 @@
+import { t } from '../../i18n';
 import React, { useState } from 'react';
 import { X, Download, Camera, Printer, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
@@ -18,7 +19,6 @@ interface ExportModalProps {
 export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
   const isOpen = useEditorStore((s) => s.isExportModalOpen);
   const setOpen = useEditorStore((s) => s.setExportModalOpen);
-  const setFeedbackModalOpen = useEditorStore((s) => s.setFeedbackModalOpen);
   const layers = useEditorStore((s) => s.layers);
   const colors = useEditorStore((s) => s.colors);
   const activeZone = useEditorStore((s) => s.activeZone);
@@ -69,7 +69,6 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
 
       // Automatically trigger feedback modal after export to collect impressions!
       setTimeout(() => {
-        setFeedbackModalOpen(true);
       }, 1000);
     } catch (err) {
       console.error('Export failed:', err);
@@ -89,10 +88,8 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
               <Download className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base font-bold">Export Design & Production Files</h2>
-              <p className="text-xs text-slate-500">
-                Download high-res 3D mockups or print-ready layered artwork
-              </p>
+              <h2 className="text-base font-bold">{t('Dizaynni yuklab olish')}</h2>
+              <p className="text-xs text-slate-500">{t('3D ko\'rinish yoki bosmaga tayyor faylni yuklab oling')}</p>
             </div>
           </div>
           <button
@@ -114,12 +111,8 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
             }`}
           >
             <div className="flex items-center gap-2 font-bold text-sm text-slate-800">
-              <Camera className="w-4 h-4 text-primary-400" />
-              3D Mockup Snapshot
-            </div>
-            <p className="text-xs text-slate-500 mt-1">
-              Photorealistic render from your current 3D camera angle
-            </p>
+              <Camera className="w-4 h-4 text-primary-400" />{t('3D surat')}</div>
+            <p className="text-xs text-slate-500 mt-1">{t('Hozirgi 3D burchakdan fotorealistik rasm')}</p>
           </button>
 
           <button
@@ -131,25 +124,19 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
             }`}
           >
             <div className="flex items-center gap-2 font-bold text-sm text-slate-800">
-              <Printer className="w-4 h-4 text-success-400" />
-              Print-Ready Flat Artwork
-            </div>
-            <p className="text-xs text-slate-500 mt-1">
-              High-DPI manufacturing layout with layer preservation
-            </p>
+              <Printer className="w-4 h-4 text-success-400" />{t('Bosma uchun tekis fayl')}</div>
+            <p className="text-xs text-slate-500 mt-1">{t('Yuqori sifatli, qatlamlar saqlangan ishlab chiqarish fayli')}</p>
           </button>
         </div>
 
         {/* Format Selection */}
         <div className="space-y-2">
-          <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">
-            File Format
-          </label>
+          <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">{t('Fayl formati')}</label>
           <div className="grid grid-cols-3 gap-2.5">
             {[
-              { id: 'png', label: 'PNG Image', desc: 'Lossless & transparent support' },
-              { id: 'jpg', label: 'JPEG / JPG', desc: 'Standard compressed format' },
-              { id: 'psd', label: 'Adobe PSD', desc: 'Layered Photoshop file' },
+              { id: 'png', label: t('PNG rasm'), desc: t('Sifat yo\'qotilmaydi, shaffof fon') },
+              { id: 'jpg', label: 'JPEG / JPG', desc: t('Standart siqilgan format') },
+              { id: 'psd', label: 'Adobe PSD', desc: t('Qatlamli Photoshop fayli') },
             ].map((f) => (
               <button
                 key={f.id}
@@ -174,15 +161,13 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
         {/* Background Options (if 3D Mockup) */}
         {target === '3d_mockup' && (
           <div className="space-y-2">
-            <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">
-              Background Style
-            </label>
+            <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">{t('Fon')}</label>
             <div className="grid grid-cols-4 gap-2">
               {[
-                { id: 'transparent', label: 'Transparent' },
-                { id: 'studio', label: 'Studio Dark' },
-                { id: 'white', label: 'Pure White' },
-                { id: 'gradient', label: 'Spotlight' },
+                { id: 'transparent', label: t('Shaffof') },
+                { id: 'studio', label: t('Qorong\'i studiya') },
+                { id: 'white', label: t('Oq') },
+                { id: 'gradient', label: t('Nur') },
               ].map((bg) => (
                 <button
                   key={bg.id}
@@ -203,9 +188,7 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
         {/* Print template extra options */}
         {target === 'print_template' && (
           <div className="p-3 bg-slate-100/60 rounded-xl flex items-center justify-between border border-slate-200">
-            <div className="text-xs text-slate-600 font-medium">
-              Include Print Boundary Guides & 300 DPI Dimensions
-            </div>
+            <div className="text-xs text-slate-600 font-medium">{t('Bosma chegaralari va 300 DPI o\'lchamlarni qo\'shish')}</div>
             <button
               onClick={() => setIncludeMeasurements(!includeMeasurements)}
               className={`px-3 py-1 rounded-lg text-xs font-bold transition ${
@@ -214,14 +197,14 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
                   : 'bg-slate-200 text-slate-500'
               }`}
             >
-              {includeMeasurements ? 'Included' : 'None'}
+              {includeMeasurements ? t('Qo\'shilgan') : t('Yo\'q')}
             </button>
           </div>
         )}
 
         {/* Filename input */}
         <div className="space-y-1.5">
-          <label className="text-xs text-slate-500">File Name</label>
+          <label className="text-xs text-slate-500">{t('Fayl nomi')}</label>
           <input
             type="text"
             value={fileName}
@@ -235,9 +218,7 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
           <button
             onClick={() => setOpen(false)}
             className="px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition"
-          >
-            Cancel
-          </button>
+          >{t('Bekor qilish')}</button>
           <button
             onClick={handleExport}
             disabled={isExporting}
@@ -245,13 +226,11 @@ export const ExportModal: React.FC<ExportModalProps> = ({ canvas3DRef }) => {
           >
             {isExporting ? (
               <>
-                <Sparkles className="w-4 h-4 animate-spin" />
-                Generating Export...
-              </>
+                <Sparkles className="w-4 h-4 animate-spin" />{t('Tayyorlanmoqda...')}</>
             ) : (
               <>
                 <Download className="w-4 h-4" />
-                Download {format.toUpperCase()} File
+                {t('Yuklab olish')} {format.toUpperCase()}
               </>
             )}
           </button>

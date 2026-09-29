@@ -1,3 +1,4 @@
+import { t } from '../../../i18n';
 import React from 'react';
 import {
   Layers,
@@ -63,16 +64,13 @@ export const LayersTab: React.FC = () => {
           <button
             onClick={() => clearZoneLayers(activeZone)}
             className="text-[11px] text-danger-400 hover:text-danger-300 font-semibold transition"
-          >
-            Clear Zone
-          </button>
+          >{t('Zonani tozalash')}</button>
         )}
       </div>
 
       {zoneLayers.length === 0 ? (
         <div className="p-8 text-center bg-white/40 rounded-3xl border border-dashed border-slate-200 text-slate-400 text-xs">
-          No layers added to this zone yet. Use the Text, Image, or Clipart tabs to create your
-          design!
+          {t('Bu zonada hali qatlam yo\'q. Matn, Rasm yoki Logolar bo\'limidan qo\'shing.')}
         </div>
       ) : (
         <div className="space-y-2">
@@ -112,7 +110,7 @@ export const LayersTab: React.FC = () => {
                       e.stopPropagation();
                       moveLayerOrder(layer.id, 'up');
                     }}
-                    title="Bring Forward"
+                    title={t('Oldinga')}
                     className="p-1 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100"
                   >
                     <ArrowUp className="w-3.5 h-3.5" />
@@ -122,7 +120,7 @@ export const LayersTab: React.FC = () => {
                       e.stopPropagation();
                       moveLayerOrder(layer.id, 'down');
                     }}
-                    title="Send Backward"
+                    title={t('Orqaga')}
                     className="p-1 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100"
                   >
                     <ArrowDown className="w-3.5 h-3.5" />
@@ -132,7 +130,7 @@ export const LayersTab: React.FC = () => {
                       e.stopPropagation();
                       updateLayer(layer.id, { locked: !layer.locked });
                     }}
-                    title={layer.locked ? 'Unlock' : 'Lock'}
+                    title={layer.locked ? t('Qulfdan chiqarish') : t('Qulflash')}
                     className={`p-1 rounded-lg ${
                       layer.locked
                         ? 'text-warning-400'
@@ -150,7 +148,7 @@ export const LayersTab: React.FC = () => {
                       e.stopPropagation();
                       updateLayer(layer.id, { visible: !layer.visible });
                     }}
-                    title={layer.visible ? 'Hide' : 'Show'}
+                    title={layer.visible ? t('Yashirish') : t('Ko\'rsatish')}
                     className={`p-1 rounded-lg ${
                       !layer.visible
                         ? 'text-danger-400'
@@ -168,7 +166,7 @@ export const LayersTab: React.FC = () => {
                       e.stopPropagation();
                       duplicateLayer(layer.id);
                     }}
-                    title="Duplicate"
+                    title={t('Nusxalash')}
                     className="p-1 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100"
                   >
                     <Copy className="w-3.5 h-3.5" />
@@ -178,7 +176,7 @@ export const LayersTab: React.FC = () => {
                       e.stopPropagation();
                       deleteLayer(layer.id);
                     }}
-                    title="Delete"
+                    title={t('O\'chirish')}
                     className="p-1 rounded-lg text-danger-400 hover:text-danger-200 hover:bg-danger-950/60"
                   >
                     <Trash2 className="w-3.5 h-3.5" />
