@@ -24,20 +24,35 @@ const EmbedViewer: React.FC<{ canvas3DRef: React.RefObject<HTMLCanvasElement> }>
   const loadProject = useEditorStore((s) => s.loadProject);
   const setColor = useEditorStore((s) => s.setColor);
   const selectProduct = useShopStore((s) => s.selectProduct);
-  const products = useShopStore((s) => s.products);
+  const product = useShopStore((s) => s.product);
+  const loading = useShopStore((s) => s.loading);
+  const [pending, setPending] = useState<{ product?: string; canvas?: any } | null>(null);
 
   useEffect(() => {
-    const onMessage = async (e: MessageEvent) => {
+    const onMessage = (e: MessageEvent) => {
       if (!e.data || e.data.type !== 'tx:load') return;
-      if (e.data.product && products.length) await selectProduct(e.data.product);
-      const c = e.data.canvas || {};
-      loadProject({ version: '2', timestamp: Date.now(), title: 'design', colors: c.colors, layers: c.layers || [] });
-      if (c.colors?.body) setColor('all', c.colors.body);
+      setPending({ product: e.data.product, canvas: e.data.canvas });
     };
     window.addEventListener('message', onMessage);
     window.parent?.postMessage({ type: 'tx:ready' }, '*');
     return () => window.removeEventListener('message', onMessage);
-  }, [loadProject, setColor, selectProduct, products.length]);
+  }, []);
+
+  // Dizayn faqat mahsulot yuklangandan KEYIN qo'llanadi — aks holda bootstrap/selectProduct
+  // birinchi rangni (oq) qo'yib, buyurtmadagi rangni yo'qotib yuborardi.
+  useEffect(() => {
+    if (!pending || loading) return;
+    (async () => {
+      if (pending.product && product?.slug !== pending.product) { await selectProduct(pending.product); return; }
+      const c = pending.canvas || {};
+      loadProject({ version: '2', timestamp: Date.now(), title: 'design', colors: c.colors, layers: c.layers || [] });
+      if (c.colors?.body) setColor('all', c.colors.body);
+      const pc = c.colors?.body && product?.colors.find((x) => x.color.hex.toLowerCase() === String(c.colors.body).toLowerCase());
+      if (pc) useShopStore.getState().selectColor(pc);
+      setPending(null);
+    })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pending, loading, product?.slug]);
 
   return (
     <div className="h-screen w-screen bg-gradient-to-b from-white to-slate-100">
