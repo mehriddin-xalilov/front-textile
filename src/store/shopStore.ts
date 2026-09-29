@@ -74,7 +74,8 @@ export const useShopStore = create<ShopState>((set, get) => ({
       const [fonts, cliparts, phrases, products, site] = await Promise.all([api.fonts(), api.cliparts(), api.phrases(), api.products(), api.site().catch(() => null)]);
       set({ fonts, cliparts, phrases, products, site });
       loadGoogleFonts(fonts.map((f) => f.family));
-      await get().selectProduct(slug || products[0]?.slug);
+      // Birinchi ochilganda futbolka (bo'lmasa ro'yxatdagi birinchi mahsulot)
+      await get().selectProduct(slug || (products.find((p) => /tshirt|futbolka/i.test(p.slug))?.slug ?? products[0]?.slug));
       if (getToken()) {
         try {
           set({ user: await api.me() });
