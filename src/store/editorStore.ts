@@ -1,3 +1,4 @@
+import { normalizeFileUrl } from '../services/api';
 import { create } from 'zustand';
 import { DesignLayer, LayerInput, ProjectData } from '../types/editor';
 import { DesignZone, FabricConfig, ShirtColorConfig } from '../types/shirt';
@@ -394,7 +395,8 @@ export const useEditorStore = create<EditorState>((set, get) => ({
   loadProject: (project) => {
     set({
       colors: project.colors,
-      layers: project.layers,
+      // Rasm manzillari hozirgi API domeniga moslanadi (eski domen/http bilan saqlangan bo'lsa)
+      layers: (project.layers || []).map((l) => (l.type === 'image' && (l as any).src ? { ...l, src: normalizeFileUrl((l as any).src) as string } : l)),
       selectedLayerId: null,
       history: { past: [], future: [] },
     });

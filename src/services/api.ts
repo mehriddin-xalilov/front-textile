@@ -31,6 +31,18 @@ function resolveApiRoot(): string {
 }
 
 const API_ROOT = resolveApiRoot();
+/** API domeni (`https://api.motex.uz`) — fayl manzillarini hozirgi domenga moslash uchun */
+export const API_ORIGIN = API_ROOT.replace(/\/api\/v1$/, '');
+
+/**
+ * Eski domen (nip.io, http) bilan saqlangan fayl manzilini hozirgi API domeniga o'tkazadi.
+ * Domen almashganda yoki https ga o'tganda eski dizaynlardagi rasmlar ochilmay qolmasin.
+ */
+export const normalizeFileUrl = (src?: string | null): string | undefined => {
+  if (!src) return undefined;
+  const m = src.match(/^https?:\/\/[^/]+(\/storage\/.*)$/);
+  return m ? API_ORIGIN + m[1] : src;
+};
 const TOKEN_KEY = 'tx_token';
 
 export const getToken = () => localStorage.getItem(TOKEN_KEY);
