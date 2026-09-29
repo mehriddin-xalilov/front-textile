@@ -99,6 +99,25 @@ export const CartPage: React.FC = () => {
             </button>
           </div>
         ))}
+
+      <div className="grid grid-cols-2 gap-3 pt-3">
+        {[
+          { icon: ShieldCheck, title: t('Xaridor himoyasi'), text: t("100% pulni qaytarish kafolati") },
+          { icon: CreditCard, title: t("Xavfsiz to'lov"), text: t('Payme, Click, Uzum') },
+          { icon: Truck, title: t('Tezkor yetkazib berish'), text: t('1-3 ish kuni') },
+          { icon: RotateCcw, title: t('Oson qaytarish'), text: t('14 kun ichida') },
+        ].map((f) => (
+          <div key={f.title} className="bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-3">
+            <span className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
+              <f.icon className="w-5 h-5" />
+            </span>
+            <div className="min-w-0">
+              <div className="text-sm font-bold text-slate-900 truncate">{f.title}</div>
+              <div className="text-xs text-slate-500 truncate">{f.text}</div>
+            </div>
+          </div>
+        ))}
+      </div>
       </div>
 
       <form onSubmit={order} className="bg-white border border-slate-200 rounded-2xl p-5 space-y-4 lg:sticky lg:top-24">
@@ -130,24 +149,6 @@ export const CartPage: React.FC = () => {
         </button>
       </form>
 
-      <div className="lg:col-span-2 grid grid-cols-2 lg:grid-cols-4 gap-3">
-        {[
-          { icon: ShieldCheck, title: t('Xaridor himoyasi'), text: t("100% pulni qaytarish kafolati") },
-          { icon: CreditCard, title: t("Xavfsiz to'lov"), text: t('Payme, Click, Uzum') },
-          { icon: Truck, title: t('Tezkor yetkazib berish'), text: t('1-3 ish kuni') },
-          { icon: RotateCcw, title: t('Oson qaytarish'), text: t('14 kun ichida') },
-        ].map((f) => (
-          <div key={f.title} className="bg-white border border-slate-200 rounded-2xl p-4 flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
-              <f.icon className="w-5 h-5" />
-            </span>
-            <div className="min-w-0">
-              <div className="text-sm font-bold text-slate-900 truncate">{f.title}</div>
-              <div className="text-xs text-slate-500 truncate">{f.text}</div>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };
