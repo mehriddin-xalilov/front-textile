@@ -1,8 +1,36 @@
 /**
- * Textile API mijozi. Base: VITE_API_ROOT (default http://127.0.0.1:8200/api/v1).
- * Token localStorage'da ("tx_token"). Javob formati: { data } | { message, errors }.
+ * Textile API mijozi.
+ *
+ * API manzili ish vaqtida aniqlanadi: sayt qaysi domenda ochilgan bo'lsa,
+ * API ham o'sha domenning `api.` subdomenidan olinadi. Shu sababli domen
+ * o'zgarganda (masalan nip.io dan motex.uz ga) qayta build qilish shart emas.
+ * Tartib: window.__API_ROOT → VITE_API_ROOT → domen bo'yicha → localhost.
  */
-const API_ROOT = (import.meta.env.VITE_API_ROOT as string) || 'http://127.0.0.1:8200/api/v1';
+function resolveApiRoot(): string {
+  const injected = typeof window !== 'undefined' ? (window as any).__API_ROOT : undefined;
+  if (injected) return String(injected).replace(/\/$/, '');
+
+  const fromEnv = import.meta.env.VITE_API_ROOT as string | undefined;
+  const host = typeof window !== 'undefined' ? window.location.hostname : '';
+  const isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(host);
+
+  // Haqiqiy domenda ochilgan bo'lsa — o'sha domenning api. subdomeni
+  if (!isLocal && host) {
+    const bare = host.replace(/^www\./, '');
+    const apiHost = bare.startsWith('api.') ? bare : `api.${bare}`;
+
+    // nip.io kabi IP asosidagi sinov manzillari: `textile.<ip>.nip.io` → `api-textile.<ip>.nip.io`
+    if (/\.nip\.io$/.test(bare)) {
+      return `${window.location.protocol}//${bare.replace(/^textile\./, 'api-textile.')}/api/v1`;
+    }
+
+    return `${window.location.protocol}//${apiHost}/api/v1`;
+  }
+
+  return (fromEnv || 'http://127.0.0.1:8200/api/v1').replace(/\/$/, '');
+}
+
+const API_ROOT = resolveApiRoot();
 const TOKEN_KEY = 'tx_token';
 
 export const getToken = () => localStorage.getItem(TOKEN_KEY);

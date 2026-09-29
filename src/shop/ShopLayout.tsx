@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import { Shirt, UserRound, Package, LogIn, Sparkles, Heart, ShoppingCart } from 'lucide-react';
+import { UserRound, Package, LogIn, Sparkles, Heart, ShoppingCart } from 'lucide-react';
 import { useShopStore } from '../store/shopStore';
 import { AuthModal } from '../components/shop/AuthModal';
 import { t } from '../i18n';
@@ -31,10 +31,8 @@ export const ShopLayout: React.FC = () => {
       <ScrollToTop />
       <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-xl border-b border-slate-200">
         <div className="max-w-7xl mx-auto h-16 px-4 sm:px-8 flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-primary-600 flex items-center justify-center text-white shadow-sm shadow-primary-600/30">
-              <Shirt className="w-[18px] h-[18px]" />
-            </div>
+          <Link to="/" className="flex items-center gap-2.5" aria-label="Textile">
+            <img src="/brand/mark.svg" alt="" className="w-9 h-9" />
             <div className="hidden sm:block leading-tight">
               <div className="text-sm font-black tracking-tight text-slate-900 uppercase">Textile</div>
               <div className="text-[10px] text-slate-500">{t("O'z logotipingizni bosing")}</div>
@@ -80,9 +78,7 @@ export const ShopLayout: React.FC = () => {
       <footer className="bg-slate-900 text-slate-300 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 grid sm:grid-cols-4 gap-8 text-sm">
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-white font-black uppercase tracking-tight">
-              <span className="w-8 h-8 rounded-xl bg-primary-600 flex items-center justify-center"><Shirt className="w-4 h-4" /></span> Textile
-            </div>
+            <img src="/brand/logo-white.svg" alt="Textile" className="h-8 w-auto" />
             <p className="text-slate-400 text-xs leading-relaxed">{t("O'z logotipingizni bosing")}</p>
           </div>
           <div className="space-y-1.5">
