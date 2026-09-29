@@ -1,3 +1,4 @@
+import { t } from '../../../i18n';
 import React from 'react';
 import { useEditorStore } from '../../../store/editorStore';
 import { useSceneStore, CameraPreset } from '../../../store/sceneStore';
@@ -10,10 +11,10 @@ export const MobileZoneBar: React.FC = () => {
   const setCameraPreset = useSceneStore((s) => s.setCameraPreset);
 
   const zones: { id: DesignZone; label: string; camera: CameraPreset }[] = [
-    { id: 'front', label: 'Front', camera: 'front' },
-    { id: 'back', label: 'Back', camera: 'back' },
-    { id: 'sleeve_left', label: 'Left', camera: 'sleeve_left' },
-    { id: 'sleeve_right', label: 'Right', camera: 'sleeve_right' },
+    { id: 'front', label: t('Old'), camera: 'front' },
+    { id: 'back', label: t('Orqa'), camera: 'back' },
+    { id: 'sleeve_left', label: t('Chap'), camera: 'sleeve_left' },
+    { id: 'sleeve_right', label: t("O'ng"), camera: 'sleeve_right' },
   ];
 
   const handleZoneChange = (zone: DesignZone, camera: CameraPreset) => {
