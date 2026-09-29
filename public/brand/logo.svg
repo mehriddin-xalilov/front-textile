@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 64" width="250" height="64" role="img" aria-label="Textile">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 64" width="236" height="64" role="img" aria-label="Motex">
   <defs>
-    <linearGradient id="txg" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="mx" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#3B82F6"/>
       <stop offset="1" stop-color="#1D4ED8"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="15" fill="url(#txg)"/>
-  <path fill="#fff" d="M26.4 15h11.2c.5 0 .9.3 1.1.7.9 2 3.4 2.9 5.2 1.8l5.6 3.3c.9.5 1.3 1.6 1 2.6l-2.2 6.6c-.3.9-1.3 1.4-2.2 1.1l-3.6-1.2V47a2 2 0 0 1-2 2H23.5a2 2 0 0 1-2-2V29.9l-3.6 1.2c-.9.3-1.9-.2-2.2-1.1l-2.2-6.6c-.3-1 .1-2.1 1-2.6l5.6-3.3c1.8 1.1 4.3.2 5.2-1.8.2-.4.6-.7 1.1-.7Z"/>
-  <rect x="27" y="33" width="10" height="4" rx="2" fill="#1D4ED8"/>
-  <text x="80" y="42" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.8" fill="#0F172A">TEXTILE</text>
+  <rect width="64" height="64" rx="15" fill="url(#mx)"/>
+  <path fill="#fff" d="M15 47V19.6c0-1 .8-1.6 1.7-1.6h4.6c.6 0 1.2.3 1.5.9l7.9 13.6c.4.7 1.4.7 1.8 0l7.9-13.6c.3-.6.9-.9 1.5-.9h4.4c1 0 1.7.7 1.7 1.6V47h-7.3V32.4l-5.2 8.8c-.9 1.6-3.2 1.6-4.1 0l-5.2-8.8V47H15Z"/>
+  <text x="78" y="42" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="29" font-weight="800" letter-spacing="0.5" fill="#0F172A">MOTEX</text>
 </svg>

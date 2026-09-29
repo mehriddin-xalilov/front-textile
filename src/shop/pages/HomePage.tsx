@@ -61,7 +61,7 @@ export const HomePage: React.FC = () => {
         )}
         <div className="relative z-10 p-8 sm:p-12 flex flex-col justify-center gap-5">
           <h1 className="text-3xl sm:text-5xl font-black text-slate-900 leading-[1.05] tracking-tight">
-            {banner?.title || 'Textile'}
+            {banner?.title || 'Motex'}
           </h1>
           {banner?.subtitle && <p className="text-slate-600 text-base max-w-md leading-relaxed">{banner.subtitle}</p>}
           <div className="flex flex-wrap items-center gap-3 pt-1">

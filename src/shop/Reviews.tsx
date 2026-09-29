@@ -121,7 +121,7 @@ export const Reviews: React.FC<{ productId?: number; designId?: number; readyPro
               {r.comment && <p className="text-sm text-slate-700 mt-2 whitespace-pre-wrap">{r.comment}</p>}
               {r.reply && (
                 <div className="mt-3 pl-3 border-l-2 border-primary-200 text-sm text-slate-600">
-                  <span className="font-semibold text-slate-800">Textile:</span> {r.reply}
+                  <span className="font-semibold text-slate-800">Motex:</span> {r.reply}
                 </div>
               )}
             </li>

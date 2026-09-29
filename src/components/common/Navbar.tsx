@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
           <div className="hidden sm:block">
             <div className="flex items-center gap-1.5">
               <h1 className="text-xs font-black tracking-tight text-slate-900 uppercase">
-                Textile Konstruktor
+                Motex Konstruktor
               </h1>
             </div>
             <p className="text-[10px] text-slate-500 font-medium">3D dizayn · logo va yozuv</p>

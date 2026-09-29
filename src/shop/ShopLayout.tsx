@@ -31,10 +31,10 @@ export const ShopLayout: React.FC = () => {
       <ScrollToTop />
       <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-xl border-b border-slate-200">
         <div className="max-w-7xl mx-auto h-16 px-4 sm:px-8 flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-2.5" aria-label="Textile">
+          <Link to="/" className="flex items-center gap-2.5" aria-label="Motex">
             <img src="/brand/mark.svg" alt="" className="w-9 h-9" />
             <div className="hidden sm:block leading-tight">
-              <div className="text-sm font-black tracking-tight text-slate-900 uppercase">Textile</div>
+              <div className="text-sm font-black tracking-tight text-slate-900 uppercase">Motex</div>
               <div className="text-[10px] text-slate-500">{t("O'z logotipingizni bosing")}</div>
             </div>
           </Link>
@@ -78,7 +78,7 @@ export const ShopLayout: React.FC = () => {
       <footer className="bg-slate-900 text-slate-300 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 grid sm:grid-cols-4 gap-8 text-sm">
           <div className="space-y-2">
-            <img src="/brand/logo-white.svg" alt="Textile" className="h-8 w-auto" />
+            <img src="/brand/logo-white.svg" alt="Motex" className="h-8 w-auto" />
             <p className="text-slate-400 text-xs leading-relaxed">{t("O'z logotipingizni bosing")}</p>
           </div>
           <div className="space-y-1.5">
@@ -108,7 +108,7 @@ export const ShopLayout: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-slate-800 py-4 px-4 sm:px-8 text-[11px] text-slate-500 flex flex-wrap gap-4 justify-between max-w-7xl mx-auto">
-          <span>© {new Date().getFullYear()} Textile. {t('Barcha huquqlar himoyalangan.')}</span>
+          <span>© {new Date().getFullYear()} Motex. {t('Barcha huquqlar himoyalangan.')}</span>
           <span>3D: chokybali, ShoyoX, maxx_renn (Sketchfab, CC-BY) · jericNuez/shirt-designer (MIT)</span>
         </div>
       </footer>
