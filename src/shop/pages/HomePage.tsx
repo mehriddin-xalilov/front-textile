@@ -5,6 +5,7 @@ import { api, Category, Product, ReadyProduct } from '../../services/api';
 import { useShopStore } from '../../store/shopStore';
 import { t } from '../../i18n';
 import { ReadyCard, money } from '../ReadyCard';
+import { CategoryTiles, HowItWorks, StudioPromo, CorporateBlock, Testimonials, Faq } from '../HomeSections';
 
 /** Bosh sahifa: banner + tayyor mahsulotlar + 3D konstruktor katalogi. */
 export const HomePage: React.FC = () => {
@@ -127,6 +128,8 @@ export const HomePage: React.FC = () => {
         ))}
       </section>
 
+      <CategoryTiles products={products} />
+
       {/* Tayyor mahsulotlar */}
       {ready.length > 0 && (
         <section className="space-y-4">
@@ -144,6 +147,8 @@ export const HomePage: React.FC = () => {
           </div>
         </section>
       )}
+
+      <HowItWorks />
 
       {/* 3D katalog */}
       <section className="space-y-4">
@@ -173,6 +178,11 @@ export const HomePage: React.FC = () => {
           {!list.length && <div className="text-slate-400 text-sm">{t("Mahsulot yo'q")}</div>}
         </div>
       </section>
+
+      <StudioPromo />
+      <Testimonials />
+      <CorporateBlock site={site} />
+      <Faq />
     </div>
   );
 };
