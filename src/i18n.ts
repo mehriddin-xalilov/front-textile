@@ -3,6 +3,9 @@ export type Lang = 'uz' | 'ru' | 'en';
 export const LANGS: { code: Lang; label: string }[] = [{ code: 'uz', label: "O'zbek" }, { code: 'ru', label: 'Русский' }, { code: 'en', label: 'English' }];
 
 const dict: Record<string, [string, string]> = {
+  "Arizangiz ko'rib chiqilmoqda": ['Ваша заявка рассматривается', 'Your request is under review'],
+  'Konstruktor administrator tasdiqlagandan keyin ochiladi. Tasdiqlangach shu sahifani yangilang.': ['Конструктор откроется после подтверждения администратором. После подтверждения обновите страницу.', 'The designer opens once an administrator approves you. Refresh this page after approval.'],
+  'Tekshirish': ['Проверить', 'Check'],
   // Bosh sahifa bo'limlari
   'Nima bosamiz?': ['Что печатаем?', 'What do we print?'],
   'so\'mdan': ['сум и выше', 'and up'],
