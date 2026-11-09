@@ -1,10 +1,15 @@
 import { t } from '../../i18n';
 import React from 'react';
-import { RotateCw, Sun, Grid3X3, Compass, Sunrise, Sparkles, CloudSun, MoonStar, Circle, LucideIcon } from 'lucide-react';
+import { Camera, RotateCw, Sun, Grid3X3, Compass, Sunrise, Sparkles, CloudSun, MoonStar, Circle, LucideIcon } from 'lucide-react';
 import { useSceneStore, LightingPreset } from '../../store/sceneStore';
 import { useEditorStore } from '../../store/editorStore';
+import { useShopStore } from '../../store/shopStore';
+import { TryOnModal } from '../tryon/TryOnModal';
 
 export const ViewportOverlay: React.FC = () => {
+  const [tryOn, setTryOn] = React.useState(false);
+  const productSlug = useShopStore((st) => st.product?.slug) || '';
+  const canTryOn = /tshirt|polo|futbolka/i.test(productSlug);
   const cameraPreset = useSceneStore((s) => s.cameraPreset);
   const setCameraPreset = useSceneStore((s) => s.setCameraPreset);
   const lightingPreset = useSceneStore((s) => s.lightingPreset);
@@ -109,7 +114,8 @@ export const ViewportOverlay: React.FC = () => {
       </div>
 
       {/* Bottom Floating Bar */}
-      <div className="flex items-end justify-between pointer-events-auto mb-20 lg:mb-0">
+      <div className="flex items-end justify-between pointer-events-auto mb-20 lg:mb-0 gap-2">
+        <div className="flex items-center gap-2">
         <button
           onClick={toggleTurntable}
           className={`flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs font-semibold backdrop-blur-md border transition-all duration-200 shadow-xl ${
@@ -121,6 +127,16 @@ export const ViewportOverlay: React.FC = () => {
           <RotateCw className={`w-3.5 h-3.5 ${isTurntableActive ? 'animate-spin' : ''}`} />
           <span>{isTurntableActive ? t('Aylanmoqda') : t('360° aylantirish')}</span>
         </button>
+        {canTryOn && (
+          <button
+            onClick={() => setTryOn(true)}
+            className="flex items-center gap-2 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-xl shadow-primary-600/30 transition active:scale-95"
+          >
+            <Camera className="w-3.5 h-3.5" />
+            <span>{t("Kiyib ko'rish")}</span>
+          </button>
+        )}
+        </div>
 
         <div className="hidden md:flex items-center gap-3 px-3 py-1.5 bg-white/70 backdrop-blur-md rounded-xl border border-slate-200 text-[11px] text-slate-500 font-medium">
           <span>{t('• Chap tugma + surish: aylantirish')}</span>
@@ -128,6 +144,7 @@ export const ViewportOverlay: React.FC = () => {
           <span>{t('• O\'ng tugma: surish')}</span>
         </div>
       </div>
+      {tryOn && <TryOnModal onClose={() => setTryOn(false)} />}
     </div>
   );
 };

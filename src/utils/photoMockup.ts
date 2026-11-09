@@ -12,6 +12,8 @@ import { renderLayersToCanvas } from './canvasRenderer';
  */
 
 const PLATES = '/mockups';
+/** Plastinka nomi → fayl: `public/mockups/<fayl>-flat.svg` */
+const PLATE_FILE: Record<string, string> = { tshirt: 'tee' };
 
 /** Plastinka: SVG viewBox ichidagi kiyim chegarasi va bosma joyi. */
 type Plate = {
@@ -43,8 +45,10 @@ async function garmentImage(plate: string, color: string): Promise<HTMLImageElem
 
   let svg = svgCache.get(plate);
   if (!svg) {
-    const res = await fetch(`${PLATES}/${plate}-flat.svg`);
-    if (!res.ok) throw new Error(`maket shakli topilmadi: ${plate}`);
+    const res = await fetch(`${PLATES}/${PLATE_FILE[plate] || plate}-flat.svg`);
+    const type = res.headers.get('content-type') || '';
+    // SPA fallback (index.html) fayl topilmaganini yashirmasin
+    if (!res.ok || type.includes('text/html')) throw new Error(`maket shakli topilmadi: ${plate}`);
     svg = await res.text();
     svgCache.set(plate, svg);
   }

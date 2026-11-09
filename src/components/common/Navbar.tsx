@@ -203,7 +203,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
                 title={t('Kamerada kiyib ko\'rish')}
               >
                 <Camera className="w-3.5 h-3.5 text-primary-500" />
-                <span className="hidden md:inline">{t('Kiyib ko\'rish')}</span>
+                <span className="hidden sm:inline">{t('Kiyib ko\'rish')}</span>
               </button>
             )}
             <button
