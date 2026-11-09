@@ -3,6 +3,13 @@ export type Lang = 'uz' | 'ru' | 'en';
 export const LANGS: { code: Lang; label: string }[] = [{ code: 'uz', label: "O'zbek" }, { code: 'ru', label: 'Русский' }, { code: 'en', label: 'English' }];
 
 const dict: Record<string, [string, string]> = {
+  'Kiyib ko\'rish': ['Примерить', 'Try on'],
+  'Kamerada kiyib ko\'rish': ['Примерить на камеру', 'Try on with camera'],
+  'Brauzer kamerani qo\'llamaydi (HTTPS kerak).': ['Браузер не поддерживает камеру (нужен HTTPS).', 'Browser does not support the camera (HTTPS required).'],
+  'Kameraga ruxsat berilmadi. Brauzer sozlamalaridan ruxsat bering.': ['Нет доступа к камере. Разрешите в настройках браузера.', 'Camera access denied. Allow it in browser settings.'],
+  'Kamera va model yuklanmoqda...': ['Загрузка камеры и модели...', 'Loading camera and model...'],
+  'Futbolka kiyildi — harakatlanib ko\'ring': ['Футболка надета — попробуйте подвигаться', 'T-shirt on — try moving around'],
+  'Elkalaringiz va ko\'kragingiz kadrda ko\'rinsin: kameradan 1-2 metr uzoqlashing': ['Плечи и грудь должны быть в кадре: отойдите от камеры на 1-2 метра', 'Keep your shoulders and chest in frame: step back 1-2 meters'],
   "Arizangiz ko'rib chiqilmoqda": ['Ваша заявка рассматривается', 'Your request is under review'],
   'Konstruktor administrator tasdiqlagandan keyin ochiladi. Tasdiqlangach shu sahifani yangilang.': ['Конструктор откроется после подтверждения администратором. После подтверждения обновите страницу.', 'The designer opens once an administrator approves you. Refresh this page after approval.'],
   'Tekshirish': ['Проверить', 'Check'],

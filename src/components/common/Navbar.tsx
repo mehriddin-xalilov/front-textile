@@ -11,7 +11,8 @@ import {
 } from 'lucide-react';
 import { useEditorStore } from '../../store/editorStore';
 import { useShopStore } from '../../store/shopStore';
-import { UserRound, ShoppingBag, Save } from 'lucide-react';
+import { UserRound, ShoppingBag, Save, Camera } from 'lucide-react';
+import { TryOnModal } from '../tryon/TryOnModal';
 import { AdminSaveButton } from '../shop/AdminSaveButton';
 
 interface NavbarProps {
@@ -33,6 +34,10 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
   const pastLength = useEditorStore((s) => s.history.past.length);
   const futureLength = useEditorStore((s) => s.history.future.length);
   const setExportModalOpen = useEditorStore((s) => s.setExportModalOpen);
+  const [tryOn, setTryOn] = React.useState(false);
+  const productSlug = useShopStore((s) => s.product?.slug) || '';
+  // Kamerada kiyib ko'rish hozircha futbolka/polo uchun (tekis futbolka plastinkasi)
+  const canTryOn = /tshirt|polo|futbolka/i.test(productSlug);
 
   return (
     <header className="h-16 px-3 sm:px-5 lg:px-6 bg-white/90 border-b border-slate-200 backdrop-blur-xl flex items-center justify-between z-30 select-none">
@@ -191,6 +196,16 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
         {/* Project & Export (visible in studio) */}
         {activePage === 'studio' && (
           <>
+            {canTryOn && (
+              <button
+                onClick={() => setTryOn(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-600 bg-white hover:bg-slate-100 border border-slate-200 transition"
+                title={t('Kamerada kiyib ko\'rish')}
+              >
+                <Camera className="w-3.5 h-3.5 text-primary-500" />
+                <span className="hidden md:inline">{t('Kiyib ko\'rish')}</span>
+              </button>
+            )}
             <button
               onClick={() => setExportModalOpen(true)}
               className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-600 bg-white hover:bg-slate-100 border border-slate-200 transition"
@@ -210,6 +225,7 @@ export const Navbar: React.FC<NavbarProps> = ({ viewMode, setViewMode }) => {
           </>
         )}
       </div>
+      {tryOn && <TryOnModal onClose={() => setTryOn(false)} />}
     </header>
   );
 };
