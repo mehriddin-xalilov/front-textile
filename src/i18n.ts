@@ -3,6 +3,7 @@ export type Lang = 'uz' | 'ru' | 'en';
 export const LANGS: { code: Lang; label: string }[] = [{ code: 'uz', label: "O'zbek" }, { code: 'ru', label: 'Русский' }, { code: 'en', label: 'English' }];
 
 const dict: Record<string, [string, string]> = {
+  'Kamerani almashtirish': ['Сменить камеру', 'Switch camera'],
   'Kiyib ko\'rish': ['Примерить', 'Try on'],
   'Kamerada kiyib ko\'rish': ['Примерить на камеру', 'Try on with camera'],
   'Brauzer kamerani qo\'llamaydi (HTTPS kerak).': ['Браузер не поддерживает камеру (нужен HTTPS).', 'Browser does not support the camera (HTTPS required).'],

@@ -14,6 +14,10 @@ function resolveApiRoot(): string {
   const host = typeof window !== 'undefined' ? window.location.hostname : '';
   const isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(host);
 
+  // Demo: `textile-site.motex.uz` (sayt) → `textile.motex.uz/api/v1` (admin + API bir domenda)
+  const demo = host.match(/^([a-z0-9-]+)-site\.(.+)$/);
+  if (demo) return `${window.location.protocol}//${demo[1]}.${demo[2]}/api/v1`;
+
   // Haqiqiy domenda ochilgan bo'lsa — o'sha domenning api. subdomeni
   if (!isLocal && host) {
     const bare = host.replace(/^www\./, '');
